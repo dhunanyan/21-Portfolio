@@ -1,0 +1,239 @@
+img{
+    max-width: 100%;
+}
+
+body{
+    background-image: url("../img/body-background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.games{
+    display: flex;
+}
+
+.game{
+    position: relative;
+    width: 230px;
+    margin: auto 30px;
+    transition: transform 250ms ease-out;
+
+    &__rank{
+        position: absolute;
+        top: 0;
+        right: 1em;
+        z-index: 5;
+        font-weight: 700;
+        font-size: 1.125em;
+        background-color: rgba(0,0,0,0.65);
+        clip-path: polygon(100% 0, 100% 100%, 51% 80%, 0 100%, 0 0);
+        transition: var(--transition);
+        cursor: pointer;
+
+        i{
+            padding: 20px 7px;
+        }
+    }
+
+    &__background{
+        background-color: rgb(40, 46, 54);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transform: scale(.2, .9);
+        border-radius: var(--br);
+        opacity: 0;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+//////////////////////////////////
+
+    .game__rank._active{
+        transform: translate(90%, -62%);
+    }
+    
+    .game__rank._active+.front{
+        transform: translateY(-30%) scale(.8);
+        background-color: transparent;
+    }
+
+    .game__rank._active+.front>.front__stats{
+        opacity: 0;
+    }
+
+    .game__rank._active+.front>.front__name{
+        animation: gameName 250ms forwards;
+    }
+
+    .game__rank._active+.front+.back{
+        opacity: 1;
+        transition: transform 250ms ease-in-out, opacity 150ms linear;
+        transform: translateY(20px);
+    }
+
+    .game__rank._active+.front+.back>.back__streamers{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .game__rank._active+.front+.back>.back__name{
+        font-weight: 500;
+    }
+
+    .game__rank._active+.front+.back+.game__background{
+        transform: scale(1.3, 1.2);
+        transition: 
+            var(--transition),
+            opacity 100ms linear;
+        opacity: 1;
+    }
+
+//////////////////////////////////
+.front{
+    transition: transform 250ms ease-out;
+    background-color: rgba(65, 65, 65, 0.8);
+    border-radius: 20px;
+
+    &__thumbnail{
+        border-radius: 20px;
+    }
+
+    &__name{
+        font-weight: 700;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    &__stats{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    &__streamers{
+        display: flex;
+        text-align: center;
+        
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid var(--clr-dark);
+
+            &:nth-of-type(1){
+                transform: translate(150%);
+                z-index: 3;
+            }
+
+            &:nth-of-type(2){
+                transform: translate(100%);
+                z-index: 2;
+            }
+
+            &:nth-of-type(3){
+                transform: translate(50%);
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.back{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(35%);
+
+    &__streaming-info{
+        margin: 10px 0;
+        columns: 2;
+        column-rule: 1px solid rgba(255, 255, 255, .25)
+    }
+
+    &__stat{
+        font-size: 1.125rem;
+        text-align: center;
+
+        span{
+            display: block;
+            font-size: .85rem;
+        }
+    }
+
+    &__btn{
+        cursor: pointer;
+        border: 0;
+        background: var(--clr-secondary);
+        color: var(--clr-light);
+        font-weight: 700;
+        padding: 15px 20px;
+        border-radius: 100vw;
+        margin: 10px 0;
+        font-size: 18px;
+
+        transition: all 250ms ease-out;
+    }
+
+    &__btn:hover{
+        color: var(--clr-secondary);
+        background: var(--clr-light);
+    }
+
+    &__streamers{
+        display: flex;
+        text-align: center;
+        margin: 10px 0;
+
+        img{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+    }
+}
+
+@keyframes gameName{
+    0%{
+        text-align: left;
+        opacity: 1;
+    }
+
+    20%{
+        text-align: left;
+        opacity: 0;
+    }
+
+    60%{
+        text-align: center;
+        opacity: 0;
+        transform: scale(1.8);
+    }
+
+    100%{
+        text-align: center;
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
