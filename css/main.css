@@ -352,10 +352,12 @@ body {
     pointer-events: none;
     -webkit-transition: opacity 350ms ease-out 350ms;
     transition: opacity 350ms ease-out 350ms;
-    -webkit-transition: -webkit-transform 350ms ease-out;
-    transition: -webkit-transform 350ms ease-out;
-    transition: transform 350ms ease-out;
-    transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
+    -webkit-transition: -webkit-transform 350ms ease-out 350ms;
+    transition: -webkit-transform 350ms ease-out 350ms;
+    transition: transform 350ms ease-out 350ms;
+    transition: transform 350ms ease-out 350ms, -webkit-transform 350ms ease-out 350ms;
+    -webkit-transition: visibility 150ms ease-out 500ms;
+    transition: visibility 150ms ease-out 500ms;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
@@ -370,12 +372,12 @@ body {
             transform: translateY(0);
     opacity: 1;
     padding-top: 73px;
-    -webkit-transition: opacity 350ms ease-out;
-    transition: opacity 350ms ease-out;
-    -webkit-transition: -webkit-transform 350ms ease-out;
-    transition: -webkit-transform 350ms ease-out;
-    transition: transform 350ms ease-out;
-    transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
+    -webkit-transition: opacity 350ms ease-out 700ms;
+    transition: opacity 350ms ease-out 700ms;
+    -webkit-transition: -webkit-transform 350ms ease-out 20ms;
+    transition: -webkit-transform 350ms ease-out 20ms;
+    transition: transform 350ms ease-out 20ms;
+    transition: transform 350ms ease-out 20ms, -webkit-transform 350ms ease-out 20ms;
   }
   .tabs .header .menu__icon {
     display: block;
@@ -647,20 +649,33 @@ body {
 
 .back__streaming-info {
   margin: 10px;
-  -webkit-columns: 2;
-          columns: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-rule: 1px solid rgba(255, 255, 255, 0.25);
           column-rule: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.back__line {
+  height: 28px;
+  width: 1px;
+  background-color: #ddd;
+  display: block;
 }
 
 .back__stat {
   font-size: 1.125rem;
   text-align: center;
+  width: calc((100% / 2) -30px);
 }
 
 .back__stat span {
   display: block;
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 
 .back__btn {
@@ -978,7 +993,7 @@ body {
   }
   .back__btn {
     font-size: 12px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     margin: 5px 0;
   }
   .game__rank._active + .front + .back + .game__background {
@@ -986,7 +1001,7 @@ body {
             transform: scale(1.1, 1.2);
   }
   .game__rank._active + .front > .front__name {
-    font-size: 14px;
+    font-size: 16px;
   }
   .game__rank._active + .front {
     -webkit-transform: translateY(-40%) scale(0.6);
@@ -1001,13 +1016,13 @@ body {
     margin: 50px 0;
   }
   .games {
-    padding: 65px 0 60px 0;
+    padding: 50px 0 60px 0;
   }
 }
 
 @media (max-width: 352px) {
   .games {
-    padding: 50px 30px 40px 30px;
+    padding: 45px 30px 40px 30px;
   }
   .game {
     margin: 45px 40px;
@@ -1015,6 +1030,10 @@ body {
   .game__rank._active {
     -webkit-transform: translate(30%, -61%);
             transform: translate(30%, -61%);
+  }
+  .game__rank._active + .front + .back {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
   }
 }
 
