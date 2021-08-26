@@ -52,3 +52,14 @@ for (let i = 0; i < tabHeaderNodes.length; i++) {
     e.preventDefault(e);
   });
 }
+
+//MENU BURGER
+const iconMenu = document.querySelector(".menu__icon");
+const icon = document.querySelector(".menu__icon>i");
+const menuList = document.querySelector(".menu__list");
+
+iconMenu.addEventListener("click", function () {
+  menuList.classList.toggle("_show");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+});

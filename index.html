@@ -13,34 +13,41 @@
   <body>
     <div class="wrapper">
       <section class="tabs">
-        <header class="tabs__header header">
-          <nav class="menu header__menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link _active" href="#"
-                  ><i class="fas fa-home"></i>Home</a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><i class="fas fa-code"></i>Works</a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><i class="fas fa-user"></i>About</a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#"
-                  ><i class="fas fa-envelope"></i>Contact</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <div class="tabs__indicator-container">
-          <div class="tabs__indicator"></div>
+        <div class="flex-container">
+          <header class="tabs__header header">
+            <div class="header__menu menu">
+              <button class="menu__icon">
+                <i class="fas fa-bars"></i>
+              </button>
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a class="menu__link _active" href="#"
+                      ><i class="fas fa-home"></i>Home</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#"
+                      ><i class="fas fa-code"></i>Works</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#"
+                      ><i class="fas fa-user"></i>About</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#"
+                      ><i class="fas fa-envelope"></i>Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <div class="tabs__indicator-container">
+            <div class="tabs__indicator"></div>
+          </div>
         </div>
         <div class="tabs__container">
           <main class="tabs__body body">
