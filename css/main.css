@@ -656,12 +656,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-column-rule: 1px solid rgba(255, 255, 255, 0.25);
           column-rule: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .back__line {
-  height: 28px;
+  height: 25px;
   width: 1px;
   background-color: #ddd;
   display: block;

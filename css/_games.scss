@@ -213,11 +213,12 @@
     display: flex;
     min-width: 150px;
     justify-content: space-between;
+    align-items: center;
     column-rule: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   &__line {
-    height: 28px;
+    height: 25px;
     width: 1px;
     background-color: #ddd;
     display: block;
