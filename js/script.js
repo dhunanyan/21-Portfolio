@@ -49,5 +49,6 @@ for (let i = 0; i < tabHeaderNodes.length; i++) {
     tabBody.querySelector("._active").classList.remove("_active");
     tabBodyNodes[i].classList.add("_active");
     tabIndicator.style.left = `calc(calc(25% * ${i}) )`;
+    e.preventDefault(e);
   });
 }

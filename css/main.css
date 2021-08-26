@@ -122,6 +122,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
 }
 
 .wrapper {
@@ -129,7 +130,7 @@ body {
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 60px);
 }
 
 .tabs {
@@ -163,7 +164,7 @@ body {
 }
 
 .tabs__container::-webkit-scrollbar-track {
-  background: #ddd;
+  background: #aaa;
   /* color of the tracking area */
 }
 
@@ -293,6 +294,7 @@ body {
   transition: opacity 500ms ease-in-out, transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
   visibility: hidden;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .tabs .body__section._active {
@@ -304,13 +306,11 @@ body {
           transform: translateY(0);
   visibility: visible;
   pointer-events: all;
+  overflow: auto;
 }
 
 .games {
-  background-image: url("../img/body-background2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +325,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
-  padding: 45px 30px 60px 30px;
+  padding: 60px 30px;
   width: 100%;
 }
 
@@ -405,8 +405,8 @@ body {
 }
 
 .game__rank._active {
-  -webkit-transform: translate(90%, -62%);
-          transform: translate(90%, -62%);
+  -webkit-transform: translate(90%, -75%);
+          transform: translate(90%, -75%);
 }
 
 .game__rank._active + .front {
@@ -459,14 +459,46 @@ body {
   transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
   transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
-  background-color: rgba(65, 65, 65, 0.8);
   border-radius: 20px;
   position: relative;
   z-index: 1;
 }
 
+.front--1 {
+  background-color: #008298;
+}
+
+.front--2 {
+  background-color: #62abfc;
+}
+
+.front--3 {
+  background-color: #ff8b38;
+}
+
+.front--4 {
+  background-color: #245852;
+}
+
+.front--5 {
+  background-color: #f25e68;
+}
+
+.front--6 {
+  background-color: #b07cf7;
+}
+
+.front--7 {
+  background-color: #fe767f;
+}
+
+.front--8 {
+  background-color: #ffdd99;
+}
+
 .front__thumbnail {
   border-radius: 20px;
+  width: 100%;
 }
 
 .front__name {
@@ -573,8 +605,75 @@ body {
   transition: all 250ms ease-out;
 }
 
-.back__btn:hover {
-  color: var(--clr-secondary);
+.back__btn--1 {
+  background-color: #008298;
+}
+
+.back__btn--2 {
+  background-color: #62abfc;
+}
+
+.back__btn--3 {
+  background-color: #ff8b38;
+}
+
+.back__btn--4 {
+  background-color: #245852;
+}
+
+.back__btn--5 {
+  background-color: #f25e68;
+}
+
+.back__btn--6 {
+  background-color: #b07cf7;
+}
+
+.back__btn--7 {
+  background-color: #fe767f;
+}
+
+.back__btn--8 {
+  background-color: #ffdd99;
+}
+
+.back__btn--1:hover {
+  color: #008298;
+  background: var(--clr-light);
+}
+
+.back__btn--2:hover {
+  color: #62abfc;
+  background: var(--clr-light);
+}
+
+.back__btn--3:hover {
+  color: #ff8b38;
+  background: var(--clr-light);
+}
+
+.back__btn--4:hover {
+  color: #245852;
+  background: var(--clr-light);
+}
+
+.back__btn--5:hover {
+  color: #f25e68;
+  background: var(--clr-light);
+}
+
+.back__btn--6:hover {
+  color: #b07cf7;
+  background: var(--clr-light);
+}
+
+.back__btn--7:hover {
+  color: #fe767f;
+  background: var(--clr-light);
+}
+
+.back__btn--8:hover {
+  color: #ffdd99;
   background: var(--clr-light);
 }
 
@@ -590,6 +689,11 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
+}
+
+.back__streamers p {
+  margin: 7px;
+  font-size: 16px;
 }
 
 @-webkit-keyframes gameName {
@@ -803,5 +907,25 @@ body {
     width: calc((100%) - 80px);
     margin: 40px 40px;
   }
+}
+
+.tabs__indicator-footer-container {
+  width: 100%;
+  background-color: #303030;
+}
+
+.tabs__indicator-footer {
+  position: relative;
+  width: calc(100% / 3);
+  height: 5px;
+  background: #00acee;
+  left: 0;
+  border-radius: 5px;
+  -webkit-transition: left 350ms ease-out;
+  transition: left 350ms ease-out;
+}
+
+.footer {
+  height: 30px;
 }
 /*# sourceMappingURL=main.css.map */
