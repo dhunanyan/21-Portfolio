@@ -1,231 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <section class="games">
-        <div class="game">
-            <div class="game__rank">
-                <i class="fas fa-search-plus"></i>
-            </div>
-
-            <div class="game__front front">
-                <img class="front__thumbnail" src="img/screenshot.png" alt="">
-                <h3 class="front__name">Novelex LLC</h3>
-                <div class="front__stats">
-                    <p class="front__viewers">Project</p>
-                    <div class="front__streamers">
-                        <img src="img/html.png" alt="">
-                        <img src="img/scss.png" alt="">
-                        <img src="img/js.png" alt="">
-                        <img src="img/css.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="game__back back">
-                <div class="back__streaming-info">
-                    <p class="back__stat">559k<span>Watching</span></p>
-                    <p class="back__stat">25.8k<span>Streams</span></p>
-                </div>
-                <a href="#" class="back__btn">See more</a>
-                <div class="back__streamers">
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/html.png" alt=""></div>
-                        <p class="back__name">HTML</p>
-                        <p class="back__p back__number">43.4%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/scss.png" alt=""></div>
-                        <p class="back__name">SCSS</p>
-                        <p class="back__p back__number">41.9%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/js.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">11.5%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/css.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">3.2%</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="game__background"></div>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="tabs">
+        <header class="tabs__header header">
+          <nav class="menu header__menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link _active" href="#"
+                  ><i class="fas fa-home"></i>Home</a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><i class="fas fa-code"></i>Works</a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><i class="fas fa-user"></i>About</a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"
+                  ><i class="fas fa-envelope"></i>Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div class="tabs__indicator-container">
+          <div class="tabs__indicator"></div>
         </div>
+        <div class="tabs__container">
+          <main class="tabs__body body">
+            <section class="body__section _active">
+              <h1 class="body__title">Home</h1>
+              <p class="body__descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi at
+                maxime repellendus molestias reprehenderit. Magnam, labore
+                itaque. Exercitationem vel nostrum harum odio modi animi sint!
+                Facere, laudantium consectetur? Reiciendis distinctio quaerat
+                voluptatem aliquam fugiat, accusantium consectetur minus ab
+                optio voluptatum, quo ad asperiores delectus molestiae, sed
+                vitae. A blanditiis hic ipsa magnam alias deleniti recusandae!
+                Expedita culpa, laudantium repudiandae deleniti dolor quibusdam
+                tempore explicabo nobis id blanditiis pariatur doloribus
+                accusantium maiores voluptates nostrum eos, obcaecati corporis,
+                sit quia harum. Sapiente in corporis hic quibusdam nobis tempora
+                animi quaerat excepturi, explicabo amet impedit nostrum, rem
+                maxime mollitia sequi officiis, expedita doloremque.
+              </p>
+            </section>
+            <section class="games body__section">
+              <div class="games__container">
+                <div class="games__row">
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
 
-        <div class="game">
-            <div class="game__rank">
-                <i class="fas fa-search-plus"></i>
-            </div>
-
-            <div class="game__front front">
-                <img class="front__thumbnail" src="img/screenshot.png" alt="">
-                <h3 class="front__name">Novelex LLC</h3>
-                <div class="front__stats">
-                    <p class="front__viewers">Project</p>
-                    <div class="front__streamers">
-                        <img src="img/html.png" alt="">
-                        <img src="img/scss.png" alt="">
-                        <img src="img/js.png" alt="">
-                        <img src="img/css.png" alt="">
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
                     </div>
+
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
+
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
+
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
+
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
                 </div>
-            </div>
+                <div class="games__row">
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
 
-            <div class="game__back back">
-                <div class="back__streaming-info">
-                    <p class="back__stat">559k<span>Watching</span></p>
-                    <p class="back__stat">25.8k<span>Streams</span></p>
-                </div>
-                <a href="#" class="back__btn">See more</a>
-                <div class="back__streamers">
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/html.png" alt=""></div>
-                        <p class="back__name">HTML</p>
-                        <p class="back__p back__number">43.4%</p>
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
                     </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/scss.png" alt=""></div>
-                        <p class="back__name">SCSS</p>
-                        <p class="back__p back__number">41.9%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/js.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">11.5%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/css.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">3.2%</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="game__background"></div>
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
+
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
+
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
+
+                  <div class="game">
+                    <button class="game__rank">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+
+                    <div class="game__front front">
+                      <img
+                        class="front__thumbnail"
+                        src="img/screenshot.png"
+                        alt=""
+                      />
+                      <h3 class="front__name">Novelex LLC</h3>
+                      <div class="front__stats">
+                        <p class="front__viewers">Project</p>
+                        <div class="front__streamers">
+                          <img src="img/html.png" alt="" />
+                          <img src="img/scss.png" alt="" />
+                          <img src="img/js.png" alt="" />
+                          <img src="img/css.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__back back">
+                      <div class="back__streaming-info">
+                        <p class="back__stat">559k<span>Watching</span></p>
+                        <p class="back__stat">25.8k<span>Streams</span></p>
+                      </div>
+                      <a href="#" class="back__btn">See more</a>
+                      <div class="back__streamers">
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/html.png" alt="" />
+                          </div>
+                          <p class="back__name">HTML</p>
+                          <p class="back__p back__number">43.4%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/scss.png" alt="" />
+                          </div>
+                          <p class="back__name">SCSS</p>
+                          <p class="back__p back__number">41.9%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/js.png" alt="" />
+                          </div>
+                          <p class="back__name">JS</p>
+                          <p class="back__p back__number">11.5%</p>
+                        </div>
+                        <div class="back__streamer">
+                          <div class="back__icon">
+                            <img src="img/css.png" alt="" />
+                          </div>
+                          <p class="back__name">CSS</p>
+                          <p class="back__p back__number">3.2%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="game__background"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="body__section">
+              <h1 class="body__title">About</h1>
+              <p class="body__descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi at
+                maxime repellendus molestias reprehenderit. Magnam, labore
+                itaque. Exercitationem vel nostrum harum odio modi animi sint!
+                Facere, laudantium consectetur? Reiciendis distinctio quaerat
+                voluptatem aliquam fugiat, accusantium consectetur minus ab
+                optio voluptatum, quo ad asperiores delectus molestiae, sed
+                vitae. A blanditiis hic ipsa magnam alias deleniti recusandae!
+                Expedita culpa, laudantium repudiandae deleniti dolor quibusdam
+                tempore explicabo nobis id blanditiis pariatur doloribus
+                accusantium maiores voluptates nostrum eos, obcaecati corporis,
+                sit quia harum. Sapiente in corporis hic quibusdam nobis tempora
+                animi quaerat excepturi, explicabo amet impedit nostrum, rem
+                maxime mollitia sequi officiis, expedita doloremque.
+              </p>
+            </section>
+            <section class="body__section">
+              <h1 class="body__title">Contact</h1>
+              <p class="body__descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi at
+                maxime repellendus molestias reprehenderit. Magnam, labore
+                itaque. Exercitationem vel nostrum harum odio modi animi sint!
+                Facere, laudantium consectetur? Reiciendis distinctio quaerat
+                voluptatem aliquam fugiat, accusantium consectetur minus ab
+                optio voluptatum, quo ad asperiores delectus molestiae, sed
+                vitae. A blanditiis hic ipsa magnam alias deleniti recusandae!
+                Expedita culpa, laudantium repudiandae deleniti dolor quibusdam
+                tempore explicabo nobis id blanditiis pariatur doloribus
+                accusantium maiores voluptates nostrum eos, obcaecati corporis,
+                sit quia harum. Sapiente in corporis hic quibusdam nobis tempora
+                animi quaerat excepturi, explicabo amet impedit nostrum, rem
+                maxime mollitia sequi officiis, expedita doloremque.
+              </p>
+            </section>
+          </main>
         </div>
+      </section>
+    </div>
+    <!--FontAwesome-->
+    <script
+      src="https://kit.fontawesome.com/72e9e0b28f.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <div class="game">
-            <div class="game__rank">
-                <i class="fas fa-search-plus"></i>
-            </div>
-
-            <div class="game__front front">
-                <img class="front__thumbnail" src="img/screenshot.png" alt="">
-                <h3 class="front__name">Novelex LLC</h3>
-                <div class="front__stats">
-                    <p class="front__viewers">Project</p>
-                    <div class="front__streamers">
-                        <img src="img/html.png" alt="">
-                        <img src="img/scss.png" alt="">
-                        <img src="img/js.png" alt="">
-                        <img src="img/css.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="game__back back">
-                <div class="back__streaming-info">
-                    <p class="back__stat">559k<span>Watching</span></p>
-                    <p class="back__stat">25.8k<span>Streams</span></p>
-                </div>
-                <a href="#" class="back__btn">See more</a>
-                <div class="back__streamers">
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/html.png" alt=""></div>
-                        <p class="back__name">HTML</p>
-                        <p class="back__p back__number">43.4%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/scss.png" alt=""></div>
-                        <p class="back__name">SCSS</p>
-                        <p class="back__p back__number">41.9%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/js.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">11.5%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/css.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">3.2%</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="game__background"></div>
-        </div>
-
-        <div class="game">
-            <div class="game__rank">
-                <i class="fas fa-search-plus"></i>
-            </div>
-
-            <div class="game__front front">
-                <img class="front__thumbnail" src="img/screenshot.png" alt="">
-                <h3 class="front__name">Novelex LLC</h3>
-                <div class="front__stats">
-                    <p class="front__viewers">Project</p>
-                    <div class="front__streamers">
-                        <img src="img/html.png" alt="">
-                        <img src="img/scss.png" alt="">
-                        <img src="img/js.png" alt="">
-                        <img src="img/css.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="game__back back">
-                <div class="back__streaming-info">
-                    <p class="back__stat">559k<span>Watching</span></p>
-                    <p class="back__stat">25.8k<span>Streams</span></p>
-                </div>
-                <a href="#" class="back__btn">See more</a>
-                <div class="back__streamers">
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/html.png" alt=""></div>
-                        <p class="back__name">HTML</p>
-                        <p class="back__p back__number">43.4%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/scss.png" alt=""></div>
-                        <p class="back__name">SCSS</p>
-                        <p class="back__p back__number">41.9%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/js.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">11.5%</p>
-                    </div>
-                    <div class="back__streamer">
-                        <div class="back__icon"><img src="img/css.png" alt=""></div>
-                        <p class="back__name">JS</p>
-                        <p class="back__p back__number">3.2%</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="game__background"></div>
-        </div>
-    </section>
-
-
-	<!--FontAwesome-->
-	<script src="https://kit.fontawesome.com/72e9e0b28f.js" crossorigin="anonymous"></script>
-
-	<!--JS-->
-	<script src="js/script.js"></script>
-</body>
+    <!--JS-->
+    <script src="js/script.js"></script>
+  </body>
 </html>

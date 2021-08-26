@@ -1,107 +1,105 @@
 @font-face {
-	font-family: 'gotham';
-	src: url('../fonts/gotham-bold/gothambold1.woff') format('woff');
-    font-weight: 700;
+  font-family: "gotham";
+  src: url("../fonts/gotham-bold/gothambold1.woff") format("woff");
+  font-weight: 700;
 }
 
 @font-face {
-	font-family: 'gotham';
-	src: url('../fonts/gotham-medium-regular/gotham-medium-webfont.woff') format('woff');
-    font-weight: 500;
+  font-family: "gotham";
+  src: url("../fonts/gotham-medium-regular/gotham-medium-webfont.woff")
+    format("woff");
+  font-weight: 500;
 }
 
 @font-face {
-	font-family: 'gotham';
-	src: url('../fonts/gotham-book/GothamBook.woff') format('woff');
-    font-weight: 400;
+  font-family: "gotham";
+  src: url("../fonts/gotham-book/GothamBook.woff") format("woff");
+  font-weight: 400;
 }
 
-:root{
-    --clr-dark: rgb(13, 17, 19);
-    --clr-light: #fff;
-    --clr-accent: rgb(222, 52, 0);
-    --clr-accent-dark: rgb(163, 38, 0);
-    --clr-secondary: rgb(0, 129, 151);
+:root {
+  --clr-dark: rgb(13, 17, 19);
+  --clr-light: #fff;
+  --clr-accent: rgb(222, 52, 0);
+  --clr-accent-dark: rgb(163, 38, 0);
+  --clr-secondary: rgb(0, 129, 151);
 
-    ;
+  --br: 20px;
 
-    --br: 20px;
-
-    --transition: transform  200ms cubic-bezier(.21, 1.06, .81, 1.00);
+  --transition: transform 200ms cubic-bezier(0.21, 1.06, 0.81, 1);
 }
 
-body{
-    font-family: 'gotham';
+body {
+  font-family: "gotham";
 }
 
-.container{
-	max-width: 1200px;
-    margin: 0px auto;
-	padding: 0px 30px;
+.container {
+  margin: 0px auto;
+  padding: 0px 30px;
 }
 
-.title{
-	font-size: 48px;
-	font-weight: 700;
+.title {
+  font-size: 48px;
+  font-weight: 700;
 }
 
-.subtitle{
-	font-size: 28px;
-	font-weight: 500;
+.subtitle {
+  font-size: 28px;
+  font-weight: 500;
 }
 
-.descr{
-	line-height: 22px;
+.descr {
+  line-height: 22px;
 }
 
-.btn{
-	font-size: 18px;
-	font-weight: 500;
-	padding: 10px 15px;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all 350ms ease-out;
+.btn {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 350ms ease-out;
 }
 
-.btn--blue{
-	background-color: #317eaa;
-	color: #fff;
-	border: 1px solid #fff;
+.btn--blue {
+  background-color: #317eaa;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
-.btn--blue:hover{
-	background-color: #b6b7b7;
-	color: #231F20;
+.btn--blue:hover {
+  background-color: #b6b7b7;
+  color: #231f20;
 }
 
-.btn--black{
-	border: 1px solid white;
-	background-color: #317eaa;
-	color: white;
-	padding: 10px 25px;
+.btn--black {
+  border: 1px solid white;
+  background-color: #317eaa;
+  color: white;
+  padding: 10px 25px;
 }
 
 .btn--black:hover,
-.btn--black:active{
-	background-color: #231F20;
-	color: #317eaa;
+.btn--black:active {
+  background-color: #231f20;
+  color: #317eaa;
 }
 
-@keyframes status{
-	0%{
-		opacity: 1;
-		pointer-events: all;
-		display: block;
-	}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
 
-	90%{
-		opacity: 1;
-		pointer-events: all;
-	}
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
 
-	100%{
-		opacity: 0;
-		pointer-events: none;
-		display: none
-	}
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
 }
