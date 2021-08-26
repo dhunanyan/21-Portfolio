@@ -1007,10 +1007,10 @@ body {
 
 @media (max-width: 352px) {
   .games {
-    padding: 45px 30px 40px 30px;
+    padding: 50px 30px 40px 30px;
   }
   .game {
-    margin: 40px 40px;
+    margin: 45px 40px;
   }
   .game__rank._active {
     -webkit-transform: translate(30%, -61%);
