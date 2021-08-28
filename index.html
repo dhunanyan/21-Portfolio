@@ -587,23 +587,60 @@
                 </div>
               </div>
             </section>
-            <section class="body__section">
-              <h1 class="body__title">About</h1>
-              <p class="body__descr">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi at
-                maxime repellendus molestias reprehenderit. Magnam, labore
-                itaque. Exercitationem vel nostrum harum odio modi animi sint!
-                Facere, laudantium consectetur? Reiciendis distinctio quaerat
-                voluptatem aliquam fugiat, accusantium consectetur minus ab
-                optio voluptatum, quo ad asperiores delectus molestiae, sed
-                vitae. A blanditiis hic ipsa magnam alias deleniti recusandae!
-                Expedita culpa, laudantium repudiandae deleniti dolor quibusdam
-                tempore explicabo nobis id blanditiis pariatur doloribus
-                accusantium maiores voluptates nostrum eos, obcaecati corporis,
-                sit quia harum. Sapiente in corporis hic quibusdam nobis tempora
-                animi quaerat excepturi, explicabo amet impedit nostrum, rem
-                maxime mollitia sequi officiis, expedita doloremque.
-              </p>
+            <section class="body__section about">
+              <main class="about__container">
+                <div class="about__content">
+                  <h1 class="about__title">Davit Hunanyan</h1>
+                  <h2 class="about__subtitle">Front-end Developer</h2>
+                </div>
+                <div class="scroll__wrapper">
+                  <div class="scroll__filler"></div>
+                  <div class="scroll">
+                    <div class="scroll__inner">
+                      <a href="#" class="scroll__item">
+                        <h2>I made a slider</h2>
+                        <span class="scroll__item-date">5 Jun 2020</span>
+                      </a>
+                      <a href="#" class="scroll__item scroll__item--red">
+                        <h2>I don't know how to make a slider</h2>
+                        <span class="scroll__item-date">4 Jun 2020</span>
+                      </a>
+                      <a href="#" class="scroll__item">
+                        <h2>I want to make a slider</h2>
+                        <span class="scroll__item-date">3 Jun 2020</span>
+                      </a>
+                      <a href="#" class="scroll__item scroll__item--bees">
+                        <h2>bees</h2>
+                        <span class="scroll__item-date">bees</span>
+                      </a>
+                      <a href="#" class="scroll__item scroll__item--red">
+                        <h2>---------</h2>
+                        <span class="scroll__item-date">---------</span>
+                      </a>
+                      <a href="#" class="scroll__item">
+                        <h2>ь</h2>
+                        <span class="scroll__item-date">ъ</span>
+                      </a>
+                      <a href="#" class="scroll__item scroll__item--blue"></a>
+                      <div class="scroll__item scroll__item--ghost">
+                        <h2>No more items</h2>
+                        <span class="scroll__item-date">For real</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scroll__position-wrapper">
+                  <button
+                    class="scroll__btn prev"
+                    onclick="prevBtn()"
+                    disabled
+                  ></button>
+                  <div class="scroll__position">
+                    <div class="scroll__position-inner"></div>
+                  </div>
+                  <button class="scroll__btn next" onclick="nextBtn()"></button>
+                </div>
+              </main>
             </section>
             <section class="body__section">
               <h1 class="body__title">Contact</h1>
@@ -632,6 +669,9 @@
       src="https://kit.fontawesome.com/72e9e0b28f.js"
       crossorigin="anonymous"
     ></script>
+
+    <!--Slider-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
 
     <!--JS-->
     <script src="js/script.js"></script>

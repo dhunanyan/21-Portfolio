@@ -28,6 +28,22 @@
   }
 }
 
+.games._active {
+  &::-webkit-scrollbar {
+    width: 20px; /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #aaa; /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #303030; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 5px solid #00acee; /* creates padding around scroll thumb */
+  }
+}
+
 .game {
   position: relative;
   min-width: 190px;

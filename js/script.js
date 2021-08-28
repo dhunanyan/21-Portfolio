@@ -63,3 +63,110 @@ iconMenu.addEventListener("click", function () {
   icon.classList.toggle("fa-bars");
   icon.classList.toggle("fa-times");
 });
+
+//SLIDER
+
+const wrapper = document.querySelector(".scroll__wrapper");
+const el = document.querySelector(".scroll");
+const filler = document.querySelector(".scroll__filler");
+const position = document.querySelector(".scroll__position-inner");
+const inner = document.querySelector(".scroll__inner");
+const btns = {
+  prev: document.querySelector(".scroll__btn.prev"),
+  next: document.querySelector(".scroll__btn.next"),
+};
+
+const lerp = (a, b, n) => {
+  return (1 - n) * a + n * b;
+};
+
+const padding = 20;
+
+let scrollNow = 0;
+
+filler.style.width = inner.offsetWidth + padding * 2 + "px";
+position.style.width =
+  (wrapper.offsetWidth / (inner.offsetWidth + padding * 2)) * 100 + "%";
+
+const offset = 150;
+const angle = 25;
+const z = 15;
+
+function render() {
+  let now = lerp(scrollNow, wrapper.scrollLeft, 0.02);
+  gsap.set(el, { x: -now });
+  gsap.set(position, { x: (now / wrapper.offsetWidth) * 100 + "%" });
+
+  document.querySelectorAll(".scroll__item").forEach((item) => {
+    let elPos = item.offsetLeft + item.offsetWidth / 2 - scrollNow;
+
+    if (elPos > wrapper.offsetWidth - offset) {
+      let q = (wrapper.offsetWidth - elPos) / offset;
+      gsap.set(item, { rotateY: -(angle - q * angle), z: z - z * q });
+    } else if (elPos < offset) {
+      let q = elPos / offset;
+      gsap.set(item, { rotateY: angle - q * angle, z: z - z * q });
+    } else {
+      gsap.set(item, { rotateY: 0, z: 0 });
+    }
+  });
+
+  scrollNow = now;
+
+  if (wrapper.scrollLeft === 0) btns.prev.disabled = true;
+  else if (
+    inner.offsetWidth - wrapper.scrollLeft ===
+    wrapper.offsetWidth - padding * 2
+  )
+    btns.next.disabled = true;
+  else {
+    btns.prev.disabled = false;
+    btns.next.disabled = false;
+  }
+  requestAnimationFrame(render);
+}
+
+render();
+
+function nextBtn() {
+  window.innerWidth < 1230
+    ? (wrapper.scrollLeft +=
+        document.querySelector(".scroll__item").offsetWidth * 1 - 20)
+    : (wrapper.scrollLeft +=
+        document.querySelector(".scroll__item").offsetWidth * 2 - 20);
+  if (window.innerWidth < 800 && window.innerWidth > 700) {
+    wrapper.scrollLeft +=
+      document.querySelector(".scroll__item").offsetWidth * 2 - 20;
+  }
+  if (window.innerWidth < 700 && window.innerWidth > 500) {
+    wrapper.scrollLeft +=
+      document.querySelector(".scroll__item").offsetWidth * 1 - 20;
+  }
+
+  if (window.innerWidth < 576) {
+    wrapper.scrollLeft +=
+      document.querySelector(".scroll__item").offsetWidth / 100 - 20;
+  }
+}
+function prevBtn() {
+  window.innerWidth < 1230
+    ? (wrapper.scrollLeft -=
+        document.querySelector(".scroll__item").offsetWidth * 1 - 20)
+    : (wrapper.scrollLeft -=
+        document.querySelector(".scroll__item").offsetWidth * 2 - 20);
+  if (window.innerWidth < 800 && window.innerWidth > 700) {
+    wrapper.scrollLeft -=
+      document.querySelector(".scroll__item").offsetWidth * 2 - 20;
+  }
+  if (window.innerWidth < 700 && window.innerWidth > 500) {
+    wrapper.scrollLeft -=
+      document.querySelector(".scroll__item").offsetWidth * 1 - 20;
+  }
+
+  if (window.innerWidth < 576) {
+    wrapper.scrollLeft -=
+      document.querySelector(".scroll__item").offsetWidth / 100 - 20;
+  }
+}
+
+//BACKGROUND
