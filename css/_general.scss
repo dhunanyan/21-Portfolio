@@ -17,6 +17,18 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "merienda";
+  src: url("../fonts/merienda-bold/Merienda-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "merienda";
+  src: url("../fonts/merienda-regular/Merienda-Regular.ttf");
+  font-weight: 400;
+}
+
 :root {
   --clr-dark: rgb(13, 17, 19);
   --clr-light: #fff;
@@ -42,10 +54,6 @@ body {
   z-index: 0;
   width: 100%;
   height: calc(100vh - 60px);
-}
-
-.flex-container {
-  position: relative;
 }
 
 .container {

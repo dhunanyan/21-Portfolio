@@ -25,7 +25,8 @@
     display: flex;
     flex-direction: column;
     margin: 0 0 auto 0;
-    font-family: "Megrim", cursive;
+    font-family: "merienda";
+    font-weight: 700;
   }
 
   &__title {
@@ -37,7 +38,7 @@
   &__subtitle {
     font-size: 24px;
     margin-bottom: 10px;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   ::-webkit-scrollbar {
@@ -86,9 +87,7 @@
     width: 400px;
     height: 350px;
     border-radius: 16px;
-    background-image: linear-gradient(130deg, #9457e2, #5029bb);
     transform: perspective(400px);
-    box-shadow: 0 8px 20px 0 rgba(108, 79, 197, 0.44);
     padding: 30px;
     margin: 0 50px;
     vertical-align: top;
@@ -97,13 +96,19 @@
     white-space: normal;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    &--red {
+    &--html {
       background-image: linear-gradient(130deg, #ff8063, #e34040);
       box-shadow: 0 8px 20px 0 rgba(213, 65, 51, 0.45);
     }
 
-    &--bees {
+    &--css {
+      background-image: linear-gradient(130deg, #9457e2, #5029bb);
+      box-shadow: 0 8px 20px 0 rgba(108, 79, 197, 0.44);
+    }
+
+    &--js {
       background-image: linear-gradient(130deg, #ffe561, #ffd24c);
       box-shadow: 0 8px 20px 0 rgba(227, 169, 55, 0.45);
       color: #333;
@@ -112,6 +117,16 @@
     &--blue {
       background-image: linear-gradient(130deg, #1cffb7, #0075ff);
       box-shadow: 0 8px 20px 0 rgba(107, 187, 255, 0.45);
+    }
+
+    &--scss {
+      background-image: linear-gradient(130deg, #cc668d, #cc66c7);
+      box-shadow: 0 8px 20px 0 rgba(117, 59, 114, 0.45);
+    }
+
+    &--bootstrap {
+      background-image: linear-gradient(130deg, #9c4798, #69479c);
+      box-shadow: 0 8px 20px 0 rgba(73, 45, 114, 0.4);
     }
 
     &--ghost {
@@ -125,13 +140,84 @@
     &:not(:last-child) {
       margin-right: 0;
     }
+  }
 
-    h2 {
-      font-size: 1.15em;
-      font-weight: 600;
-      line-height: 1.5;
-      margin: 0 0 30px;
+  &__title {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 auto 0;
+  }
+
+  &__icon {
+    margin: auto 0;
+    font-size: 220px;
+  }
+
+  &__adobe {
+    padding: 35px;
+    color: #cc668d;
+    background-color: #fff;
+    font-size: 120px;
+    font-weight: 700;
+    border-radius: 20px;
+    margin: auto 0;
+  }
+
+  &__figma {
+    font-size: 180px;
+    margin: auto 0;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0 0 0;
+  }
+
+  &__dot {
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    width: 20px;
+    height: 20px;
+    margin: 0 15px 0 0;
+    border-radius: 20px;
+
+    &:nth-of-type(5) {
+      margin: 0;
     }
+  }
+
+  &__dot--active {
+    background-color: #fff;
+  }
+
+  &__dot-half {
+    width: 50%;
+    height: 100%;
+  }
+
+  &__dot--black.scroll__dot--active {
+    background-color: #333;
+    box-shadow: 0px 0px 0px 1px #333;
+  }
+
+  &__dot--black {
+    box-shadow: 0px 0px 0px 1px #333;
+  }
+
+  &__dot-half--active {
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &__dot-half--black.scroll__dot-half--active {
+    background-color: #333;
+    box-shadow: 0px 0px 0px 1px #333;
+  }
+
+  &__dot-half--black {
+    box-shadow: 0px 0px 0px 1px #333;
   }
 
   &__item-date {
@@ -139,7 +225,7 @@
     letter-spacing: 0.02em;
     opacity: 0.8;
     display: block;
-    margin-top: auto;
+    margin: auto 0 0 0;
   }
 
   &__position {
