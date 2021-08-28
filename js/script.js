@@ -33,26 +33,6 @@ if (buttons.length > 0) {
   });
 }
 
-//TABS
-
-let tabs = document.querySelector(".tabs");
-let tabHeader = tabs.querySelector(".tabs__header");
-let tabBody = tabs.querySelector(".tabs__body");
-let tabIndicator = tabs.querySelector(".tabs__indicator");
-let tabHeaderNodes = tabs.querySelectorAll(".menu__link");
-let tabBodyNodes = tabs.querySelectorAll(".body__section");
-
-for (let i = 0; i < tabHeaderNodes.length; i++) {
-  tabHeaderNodes[i].addEventListener("click", function () {
-    tabHeader.querySelector("._active").classList.remove("_active");
-    tabHeaderNodes[i].classList.add("_active");
-    tabBody.querySelector("._active").classList.remove("_active");
-    tabBodyNodes[i].classList.add("_active");
-    tabIndicator.style.left = `calc(calc(25% * ${i}) )`;
-    e.preventDefault(e);
-  });
-}
-
 //MENU BURGER
 const iconMenu = document.querySelector(".menu__icon");
 const icon = document.querySelector(".menu__icon>i");
@@ -64,8 +44,29 @@ iconMenu.addEventListener("click", function () {
   icon.classList.toggle("fa-times");
 });
 
-//SLIDER
+//TABS
+let tabs = document.querySelector(".tabs");
+let tabHeader = tabs.querySelector(".tabs__header");
+let tabBody = tabs.querySelector(".tabs__body");
+let tabIndicator = tabs.querySelector(".tabs__indicator");
+let tabHeaderNodes = tabs.querySelectorAll(".menu__link");
+let tabBodyNodes = tabs.querySelectorAll(".body__section");
 
+for (let i = 0; i < tabHeaderNodes.length; i++) {
+  tabHeaderNodes[i].addEventListener("click", function () {
+    if (menuList.classList.contains("_show")) {
+      menuList.classList.toggle("_show");
+    }
+    tabHeader.querySelector("._active").classList.remove("_active");
+    tabHeaderNodes[i].classList.add("_active");
+    tabBody.querySelector("._active").classList.remove("_active");
+    tabBodyNodes[i].classList.add("_active");
+    tabIndicator.style.left = `calc(calc(25% * ${i}) )`;
+    e.preventDefault(e);
+  });
+}
+
+//SLIDER
 const wrapper = document.querySelector(".scroll__wrapper");
 const el = document.querySelector(".scroll");
 const filler = document.querySelector(".scroll__filler");

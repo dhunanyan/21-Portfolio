@@ -59,6 +59,17 @@ body {
   height: calc(100vh - 60px);
 }
 
+@media (max-width: 436px) {
+  .wrapper {
+    margin: 0;
+    height: 100%;
+  }
+
+  body {
+    height: 100vh;
+  }
+}
+
 .container {
   margin: 0px auto;
   padding: 0px 30px;

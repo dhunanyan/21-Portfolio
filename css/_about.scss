@@ -97,6 +97,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     &--html {
       background-image: linear-gradient(130deg, #ff8063, #e34040);
@@ -145,11 +146,9 @@
   &__title {
     font-size: 26px;
     font-weight: 600;
-    margin: 0 0 auto 0;
   }
 
   &__icon {
-    margin: auto 0;
     font-size: 220px;
   }
 
@@ -160,18 +159,15 @@
     font-size: 120px;
     font-weight: 700;
     border-radius: 20px;
-    margin: auto 0;
   }
 
   &__figma {
     font-size: 180px;
-    margin: auto 0;
   }
 
   &__dots {
     display: flex;
     justify-content: space-between;
-    margin: auto 0 0 0;
   }
 
   &__dot {
@@ -218,14 +214,6 @@
 
   &__dot-half--black {
     box-shadow: 0px 0px 0px 1px #333;
-  }
-
-  &__item-date {
-    font-size: 0.8em;
-    letter-spacing: 0.02em;
-    opacity: 0.8;
-    display: block;
-    margin: auto 0 0 0;
   }
 
   &__position {
@@ -357,15 +345,6 @@
 
     &__subtitle {
       font-size: 20px;
-    }
-  }
-}
-
-@media (max-width: 358px) {
-  .scroll {
-    &__item {
-      width: 200px;
-      height: 200px;
     }
   }
 }

@@ -20,15 +20,10 @@
     height: 100%;
   }
 
-  &__container {
-    overflow: auto;
-    height: 100%;
-  }
-
   &__body {
     position: relative;
     height: calc(100% - 60px);
-    padding: 40px;
+    padding: 30px;
   }
 
   .body {
@@ -56,5 +51,11 @@
       pointer-events: all;
       overflow: auto;
     }
+  }
+}
+
+@media (max-width: 436px) {
+  .tabs {
+    border-radius: 0;
   }
 }
