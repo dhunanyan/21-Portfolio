@@ -61,12 +61,12 @@ body {
 
 @media (max-width: 436px) {
   .wrapper {
-    margin: 0;
-    height: 100%;
+    margin: 8px;
+    height: calc(100vh - 16px);
   }
 
   body {
-    height: 100vh;
+    height: calc(100vh - 16px);
   }
 }
 

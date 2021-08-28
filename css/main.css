@@ -59,11 +59,11 @@ body {
 
 @media (max-width: 436px) {
   .wrapper {
-    margin: 0;
-    height: 100%;
+    margin: 8px;
+    height: calc(100vh - 16px);
   }
   body {
-    height: 100vh;
+    height: calc(100vh - 16px);
   }
 }
 
@@ -295,6 +295,16 @@ canvas {
 }
 
 @media screen and (max-width: 430px) {
+  .menu:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #303030;
+    height: 81px;
+    width: 100%;
+    z-index: 2;
+  }
   .menu__list {
     width: 100%;
     pointer-events: none;
@@ -312,18 +322,18 @@ canvas {
   .menu__list._show {
     pointer-events: all;
     padding-top: 5px;
-    -webkit-transition: top 350ms ease-outs;
-    transition: top 350ms ease-outs;
-    top: 12px;
+    -webkit-transition: top 350ms ease-out;
+    transition: top 350ms ease-out;
+    top: 81px;
   }
   .menu__list::before {
     content: "";
     height: 252px;
     width: 100%;
-    background-color: #303030;
+    background-color: #414141;
     position: absolute;
-    -webkit-transition: top 1500ms ease-out;
-    transition: top 1500ms ease-out;
+    -webkit-transition: top 1500ms ease-out 500ms;
+    transition: top 1500ms ease-out 500ms;
     left: 0;
     top: -300%;
     z-index: -1;
@@ -349,9 +359,15 @@ canvas {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease-out;
+    transition: opacity 300ms ease-out;
   }
   .menu__link i {
     margin: 0 5px 0 0;
+  }
+  .menu__list._show .menu__link {
+    opacity: 1;
   }
 }
 
@@ -416,12 +432,6 @@ canvas {
   visibility: visible;
   pointer-events: all;
   overflow: auto;
-}
-
-@media (max-width: 436px) {
-  .tabs {
-    border-radius: 0;
-  }
 }
 
 .games {

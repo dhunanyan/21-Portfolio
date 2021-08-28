@@ -105,6 +105,17 @@
 
 @media screen and (max-width: 430px) {
   .menu {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #303030;
+      height: 81px;
+      width: 100%;
+      z-index: 2;
+    }
+
     &__list {
       width: 100%;
       pointer-events: none;
@@ -119,17 +130,17 @@
     &__list._show {
       pointer-events: all;
       padding-top: 5px;
-      transition: top 350ms ease-outs;
-      top: 12px;
+      transition: top 350ms ease-out;
+      top: 81px;
     }
 
     &__list::before {
       content: "";
       height: 252px;
       width: 100%;
-      background-color: #303030;
+      background-color: #414141;
       position: absolute;
-      transition: top 1500ms ease-out;
+      transition: top 1500ms ease-out 500ms;
       left: 0;
       top: -300%;
       z-index: -1;
@@ -150,10 +161,16 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      opacity: 0;
+      transition: opacity 300ms ease-out;
 
       i {
         margin: 0 5px 0 0;
       }
+    }
+
+    &__list._show &__link {
+      opacity: 1;
     }
   }
 }
