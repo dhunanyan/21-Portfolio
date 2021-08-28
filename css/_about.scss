@@ -176,10 +176,10 @@
 
   &__dot {
     box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
-    width: 20px;
-    height: 20px;
+    width: var(--dot);
+    height: var(--dot);
     margin: 0 15px 0 0;
-    border-radius: 20px;
+    border-radius: var(--dot);
 
     &:nth-of-type(5) {
       margin: 0;
@@ -207,8 +207,8 @@
   &__dot-half--active {
     background-color: #fff;
     box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: calc(var(--dot) / 2);
+    border-bottom-left-radius: calc(var(--dot) / 2);
   }
 
   &__dot-half--black.scroll__dot-half--active {
@@ -283,7 +283,25 @@
   .scroll {
     &__item {
       width: 250px;
-      height: 200px;
+      height: 300px;
+      padding: 20px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__icon {
+      font-size: 160px;
+    }
+
+    &__adobe {
+      padding: 24px;
+      font-size: 90px;
+    }
+
+    &__figma {
+      font-size: 140px;
     }
   }
 }
@@ -293,8 +311,36 @@
     &__item {
       width: 250px;
       height: 200px;
-      padding: 10px;
+      padding: 15px;
       margin: 0 5px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__icon {
+      font-size: 120px;
+    }
+
+    &__adobe {
+      padding: 20px;
+      font-size: 70px;
+    }
+
+    &__figma {
+      font-size: 100px;
+    }
+
+    &__dot {
+      width: var(--dot-small);
+      height: var(--dot-small);
+      border-radius: var(--dot-small);
+    }
+
+    &__dot-half--active {
+      border-top-left-radius: calc(var(--dot-small) / 2);
+      border-bottom-left-radius: calc(var(--dot-small) / 2);
     }
   }
 

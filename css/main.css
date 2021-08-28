@@ -36,6 +36,8 @@
   --clr-secondary: rgb(0, 129, 151);
   --br: 20px;
   --transition: transform 200ms cubic-bezier(0.21, 1.06, 0.81, 1);
+  --dot: 20px;
+  --dot-small: 14px;
 }
 
 body {
@@ -304,6 +306,7 @@ canvas {
     pointer-events: all;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    padding-top: 5px;
     opacity: 1;
     -webkit-transition: opacity 350ms ease-out 700ms;
     transition: opacity 350ms ease-out 700ms;
@@ -1298,10 +1301,10 @@ canvas {
 .scroll__dot {
   -webkit-box-shadow: 0px 0px 0px 1px white;
           box-shadow: 0px 0px 0px 1px white;
-  width: 20px;
-  height: 20px;
+  width: var(--dot);
+  height: var(--dot);
   margin: 0 15px 0 0;
-  border-radius: 20px;
+  border-radius: var(--dot);
 }
 
 .scroll__dot:nth-of-type(5) {
@@ -1332,8 +1335,8 @@ canvas {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 0px 1px white;
           box-shadow: 0px 0px 0px 1px white;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: calc(var(--dot) / 2);
+  border-bottom-left-radius: calc(var(--dot) / 2);
 }
 
 .scroll__dot-half--black.scroll__dot-half--active {
@@ -1418,7 +1421,21 @@ canvas {
 @media (max-width: 800px) {
   .scroll__item {
     width: 250px;
-    height: 200px;
+    height: 300px;
+    padding: 20px;
+  }
+  .scroll__title {
+    font-size: 24px;
+  }
+  .scroll__icon {
+    font-size: 160px;
+  }
+  .scroll__adobe {
+    padding: 24px;
+    font-size: 90px;
+  }
+  .scroll__figma {
+    font-size: 140px;
   }
 }
 
@@ -1426,8 +1443,30 @@ canvas {
   .scroll__item {
     width: 250px;
     height: 200px;
-    padding: 10px;
+    padding: 15px;
     margin: 0 5px;
+  }
+  .scroll__title {
+    font-size: 20px;
+  }
+  .scroll__icon {
+    font-size: 120px;
+  }
+  .scroll__adobe {
+    padding: 20px;
+    font-size: 70px;
+  }
+  .scroll__figma {
+    font-size: 100px;
+  }
+  .scroll__dot {
+    width: var(--dot-small);
+    height: var(--dot-small);
+    border-radius: var(--dot-small);
+  }
+  .scroll__dot-half--active {
+    border-top-left-radius: calc(var(--dot-small) / 2);
+    border-bottom-left-radius: calc(var(--dot-small) / 2);
   }
   .about {
     padding: 2px;
