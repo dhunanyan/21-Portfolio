@@ -591,8 +591,8 @@ canvas {
 
 .home .portfolio .socials__link:hover i, .home .portfolio .socials__link:focus i {
   color: #f1f1f1;
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
 }
 
 .home .portfolio .socials__link i {
@@ -619,6 +619,18 @@ canvas {
   font-size: 28px;
   line-height: 45px;
   margin: 10px 0 20px 0;
+}
+
+.home .portfolio__blue {
+  color: #0eb8dc;
+  font-weight: 700;
+  font-family: "bubble";
+}
+
+.home .portfolio__red {
+  color: #d8624e;
+  font-weight: 700;
+  font-family: "bubble";
 }
 
 .home section {
