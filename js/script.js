@@ -226,16 +226,57 @@ var ITEManimate = {
 
           onComplete: function () {
             console.log(sceneContainer);
-            TweenMax.to(portfolioContainer, 1.8, {
-              width: "100%",
-              ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
-              top: "30%",
-              ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
-            });
-            TweenMax.to(sceneContainer, 0.8, {
-              top: "-85%",
-              ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
-            });
+            if (window.innerWidth >= 1284) {
+              TweenMax.to(portfolioContainer, 1.8, {
+                width: "100%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+                top: "30%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+              TweenMax.to(sceneContainer, 0.8, {
+                top: "-80%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+            }
+
+            if (window.innerWidth <= 636) {
+              TweenMax.to(portfolioContainer, 1.8, {
+                width: "100%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+                top: "20%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+              TweenMax.to(sceneContainer, 0.8, {
+                top: "-90%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+            }
+
+            if (window.innerWidth <= 480) {
+              TweenMax.to(portfolioContainer, 1.8, {
+                width: "100%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+                top: "10%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+              TweenMax.to(sceneContainer, 0.8, {
+                top: "-92%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+            }
+
+            if (window.innerWidth <= 480) {
+              TweenMax.to(portfolioContainer, 1.8, {
+                width: "100%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+                top: "5%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+              TweenMax.to(sceneContainer, 0.8, {
+                top: "-98%",
+                ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
+              });
+            }
           },
         });
 
