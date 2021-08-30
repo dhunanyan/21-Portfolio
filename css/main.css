@@ -558,6 +558,9 @@ canvas {
   position: relative;
   -webkit-transition: all 350ms ease-out;
   transition: all 350ms ease-out;
+  background-image: linear-gradient(130deg, #d8984e, #d84e4e);
+  -webkit-box-shadow: 0px 0px 16px 5px #d84e4e;
+          box-shadow: 0px 0px 16px 5px #d84e4e;
 }
 
 .home .portfolio .socials__link:hover {
@@ -571,7 +574,9 @@ canvas {
           animation-iteration-count: 1;
   -webkit-transition: all 350ms ease-out;
   transition: all 350ms ease-out;
-  background-image: linear-gradient(130deg, #d8984e, #d84e4e);
+  background-image: linear-gradient(130deg, #1cffb7, #0075ff);
+  -webkit-box-shadow: 0px 0px 16px 5px #1cffb7;
+          box-shadow: 0px 0px 16px 5px #1cffb7;
 }
 
 .home .portfolio .socials__link:hover i {
@@ -583,7 +588,7 @@ canvas {
 .home .portfolio .socials__link i {
   text-align: center;
   font-size: 46px;
-  color: #1cffb7;
+  color: #f1f1f1;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all 350ms ease-out;
@@ -597,6 +602,7 @@ canvas {
 .home .portfolio__hi {
   font-size: 92px;
   font-family: "merienda";
+  font-weight: 700;
 }
 
 .home .portfolio__descr {
@@ -665,7 +671,7 @@ canvas {
 }
 
 .home .btn-cta {
-  background-image: linear-gradient(130deg, #1cffb7, #0075ff);
+  background-image: linear-gradient(130deg, #42ced3, #0075ff);
   -webkit-box-shadow: 0px 0px 16px 5px #1cffb7;
           box-shadow: 0px 0px 16px 5px #1cffb7;
   color: #f1f1f1;
