@@ -421,7 +421,7 @@ canvas {
   }
 }
 
-.home::-webkit-scrollbar {
+.home._active::-webkit-scrollbar {
   display: none;
   width: 0;
   background: transparent;
