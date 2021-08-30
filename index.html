@@ -22,22 +22,22 @@
               <nav class="menu__body">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a class="menu__link _active" href="#"
-                      ><i class="fas fa-home"></i>Home</a
+                    <button class="menu__link menu__home _active trigger1" data-toggle="closed"
+                      ><i class="fas fa-home"></i>Home</button
                     >
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#"
+                    <a class="menu__link menu__works" href="#"
                       ><i class="fas fa-code"></i>Works</a
                     >
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#"
+                    <a class="menu__link menu__about" href="#"
                       ><i class="fas fa-user"></i>About</a
                     >
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#"
+                    <a class="menu__link menu__contact" href="#"
                       ><i class="fas fa-envelope"></i>Contact</a
                     >
                   </li>
@@ -53,23 +53,56 @@
         </div>
         <div class="tabs__container">
           <main class="tabs__body body">
-            <section class="body__section _active">
-              <h1 class="body__title">Home</h1>
-              <p class="body__descr">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi at
-                maxime repellendus molestias reprehenderit. Magnam, labore
-                itaque. Exercitationem vel nostrum harum odio modi animi sint!
-                Facere, laudantium consectetur? Reiciendis distinctio quaerat
-                voluptatem aliquam fugiat, accusantium consectetur minus ab
-                optio voluptatum, quo ad asperiores delectus molestiae, sed
-                vitae. A blanditiis hic ipsa magnam alias deleniti recusandae!
-                Expedita culpa, laudantium repudiandae deleniti dolor quibusdam
-                tempore explicabo nobis id blanditiis pariatur doloribus
-                accusantium maiores voluptates nostrum eos, obcaecati corporis,
-                sit quia harum. Sapiente in corporis hic quibusdam nobis tempora
-                animi quaerat excepturi, explicabo amet impedit nostrum, rem
-                maxime mollitia sequi officiis, expedita doloremque.
-              </p>
+            <section class="body__section _active home">
+              <div class="big-circles">
+                <div class="big-circle"></div>
+                <div class="big-circle"></div>
+                <div class="big-circle"></div>
+                <div class="big-circle"></div>
+                <div class="big-circle"></div>
+                <div class="big-circle"></div>
+              </div>
+              <section id="home">
+                <div class="slide-wrapper">
+                  <div class="smallcircles">
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                  </div>
+                  <div class="main-home" id="home-content">
+                    <div class="main-home__content">
+                        <div>
+                          <h1 class="main-home__title">Davit Hunanyan</h1>
+                          <h2 class="main-home__subtitle">Front-end Developer</h2>
+                        </div>
+                        
+                        <p><button class="main-home__btn btn btn-cta btn-cta__green text-uppercase trigger2" data-toggle="closed">View Portfolio</button>
+                        </div></p>
+                    </div>
+                </div>
+                <section class="portfolio-wrapper" id="portfolio"> 
+                  <div class="container">
+                    <div class="cover-wrapper portfolio" id="home">
+                      <div class="socials">
+                        <a href="#" class="socials__link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="socials__link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="socials__link"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <div class="portfolio__content">
+                        <p class="portfolio__descr descr"><span class="portfolio__hi">Hi!</span>
+                          My name is Davit Hunanyan, I'm a freelancer and also a student with great passion. I would love you to create a modern website for you! You can go ahead and check out my workflow.
+                        </p>
+                        <p>
+                          <button class="btn btn--blue portfolio__btn" data-toggle="opened">WORKS<i class="fas fa-arrow-right"></i></button>
+                        </p>
+                      </div>
+                    </div>
+                  </div> 
+                </section>
+              </section>
             </section>
             <section class="games body__section">
               <div class="games__container">
@@ -754,6 +787,12 @@
 
     <!--Slider-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+
+    <!--TweenMax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!--JS-->
     <script src="js/script.js"></script>

@@ -25,7 +25,19 @@
 
 @font-face {
   font-family: "merienda";
-  src: url("../fonts/merienda-regular/Merienda-Regular.ttf");
+  src: url("../fonts/merienda-regular/Merienda-Regular.tf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "bubble";
+  src: url("../fonts/bubble-bold/bubble-bold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "bubble";
+  src: url("../fonts/bubble-regular/bubble-regular.ttf");
   font-weight: 400;
 }
 
@@ -72,7 +84,7 @@ body {
 
 .container {
   margin: 0px auto;
-  padding: 0px 30px;
+  padding: 30px;
 }
 
 .title {
@@ -87,39 +99,6 @@ body {
 
 .descr {
   line-height: 22px;
-}
-
-.btn {
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 350ms ease-out;
-}
-
-.btn--blue {
-  background-color: #317eaa;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.btn--blue:hover {
-  background-color: #b6b7b7;
-  color: #231f20;
-}
-
-.btn--black {
-  border: 1px solid white;
-  background-color: #317eaa;
-  color: white;
-  padding: 10px 25px;
-}
-
-.btn--black:hover,
-.btn--black:active {
-  background-color: #231f20;
-  color: #317eaa;
 }
 
 @keyframes status {

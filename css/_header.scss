@@ -15,6 +15,10 @@
     position: relative;
     height: 5px;
   }
+
+  &__indicator--absolute {
+    box-shadow: 0px 1px 11px -1px #000000;
+  }
 }
 
 .header {
@@ -70,7 +74,7 @@
   }
 
   &__link {
-    color: #ddd;
+    color: #aaa;
     font-size: 18px;
     width: 100%;
     padding: 20px 10px;
@@ -82,6 +86,11 @@
     outline: none;
     text-align: center;
     transition: color 350ms ease-out;
+    background-color: transparent;
+
+    &:hover {
+      color: #fff;
+    }
 
     i {
       margin: 0 0 5px 0;
@@ -144,11 +153,17 @@
       left: 0;
       top: -300%;
       z-index: -1;
+      transform: translate(100%, -100%) scale(0.5);
+      border-radius: 100%;
     }
 
     ._show.menu__list::before {
       top: 0;
       transition: top 100ms ease-out;
+      transform: translateY(0) scale(1);
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
     }
 
     &__icon {
