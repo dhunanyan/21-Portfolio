@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "merienda";
-  src: url("../fonts/merienda-regular/Merienda-Regular.tf");
+  src: url("../fonts/merienda-regular/Merienda-Regular.ttf");
   font-weight: 400;
 }
 
@@ -1321,6 +1321,10 @@ canvas {
   overflow: hidden;
 }
 
+.tabs .body__section.about._active {
+  overflow-x: hidden;
+}
+
 .games {
   background-color: #ddd;
   display: -webkit-box;
@@ -1413,7 +1417,8 @@ canvas {
 }
 
 .game__rank i {
-  padding: 20px 7px;
+  padding: 20px 20px 30px 20px;
+  font-size: 24px;
 }
 
 .game__background {
@@ -1436,8 +1441,8 @@ canvas {
 }
 
 .game__rank._active {
-  -webkit-transform: translate(90%, -75%);
-          transform: translate(90%, -75%);
+  -webkit-transform: translate(-97%, -108%);
+          transform: translate(-97%, -108%);
 }
 
 .game__rank._active + .front {

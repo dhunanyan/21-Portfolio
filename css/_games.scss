@@ -65,7 +65,8 @@
     color: #fff;
 
     i {
-      padding: 20px 7px;
+      padding: 20px 20px 30px 20px;
+      font-size: 24px;
     }
   }
 
@@ -90,7 +91,7 @@
 //////////////////////////////////
 
 .game__rank._active {
-  transform: translate(90%, -75%);
+  transform: translate(-97%, -108%);
 }
 
 .game__rank._active + .front {

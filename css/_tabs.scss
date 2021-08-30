@@ -55,5 +55,9 @@
     &__section.home._active {
       overflow: hidden;
     }
+
+    &__section.about._active {
+      overflow-x: hidden;
+    }
   }
 }
