@@ -1188,6 +1188,10 @@ canvas {
     max-width: 150px;
     letter-spacing: 2.5px;
   }
+  .home .main-home .trigger2 {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
   .home .small-circle {
     width: 120px;
     height: 120px;
@@ -1229,6 +1233,12 @@ canvas {
     display: block;
     top: 38%;
     left: 86%;
+  }
+}
+
+@media (max-width: 360px) {
+  .home .portfolio .socials {
+    margin: 0 0 30px auto;
   }
 }
 

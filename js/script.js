@@ -265,15 +265,15 @@ var ITEManimate = {
               });
             }
 
-            if (window.innerWidth <= 480) {
+            if (window.innerWidth <= 360) {
               TweenMax.to(portfolioContainer, 1.8, {
                 width: "100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
-                top: "5%",
+                top: "0%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
               });
               TweenMax.to(sceneContainer, 0.8, {
-                top: "-98%",
+                top: "-100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
               });
             }
