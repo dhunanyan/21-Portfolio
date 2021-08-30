@@ -1,5 +1,5 @@
-.about._active {
-  &::-webkit-scrollbar {
+._active.about {
+  ::-webkit-scrollbar {
     display: none;
     width: 0;
     background: transparent;

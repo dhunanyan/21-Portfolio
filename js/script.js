@@ -44,49 +44,6 @@ iconMenu.addEventListener("click", function () {
   icon.classList.toggle("fa-times");
 });
 
-//TABS
-let tabs = document.querySelector(".tabs");
-let tabHeader = tabs.querySelector(".tabs__header");
-let tabBody = tabs.querySelector(".tabs__body");
-let tabIndicator = tabs.querySelector(".tabs__indicator");
-let tabHeaderNodes = tabs.querySelectorAll(".menu__link");
-let tabBodyNodes = tabs.querySelectorAll(".body__section");
-let worksButton = tabs.querySelector(".portfolio__btn");
-let worksSection = tabs.querySelector(".games");
-let worksLink = tabs.querySelector(".menu__works");
-let home = tabs.querySelector(".menu__home");
-
-for (let i = 0; i < tabHeaderNodes.length; i++) {
-  tabHeaderNodes[i].addEventListener("click", function () {
-    if (menuList.classList.contains("_show")) {
-      menuList.classList.toggle("_show");
-      icon.classList.toggle("fa-bars");
-      icon.classList.toggle("fa-times");
-    }
-    tabHeader.querySelector("._active").classList.remove("_active");
-    tabHeaderNodes[i].classList.add("_active");
-    tabBody.querySelector("._active").classList.remove("_active");
-    tabBodyNodes[i].classList.add("_active");
-    tabIndicator.style.left = `calc(calc(25% * ${i}) )`;
-    e.preventDefault(e);
-  });
-}
-
-worksButton.addEventListener("click", function (e) {
-  if (menuList.classList.contains("_show")) {
-    menuList.classList.toggle("_show");
-    icon.classList.toggle("fa-bars");
-    icon.classList.toggle("fa-times");
-  }
-
-  tabHeader.querySelector("._active").classList.remove("_active");
-  worksLink.classList.add("_active");
-  tabBody.querySelector("._active").classList.remove("_active");
-  worksSection.classList.add("_active");
-  tabIndicator.style.left = `calc(calc(25%) )`;
-  e.preventDefault(e);
-});
-
 //SLIDER
 const wrapper = document.querySelector(".scroll__wrapper");
 const el = document.querySelector(".scroll");
@@ -257,7 +214,7 @@ var ITEManimate = {
     animate: function () {
       //OPEN
       function openAnimation() {
-        TweenMax.to(sceneContainer, 0.8, {
+        TweenMax.to(sceneContainer, 1.8, {
           height: "100%",
           ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
           top: "0%",
@@ -276,7 +233,7 @@ var ITEManimate = {
               ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
             });
             TweenMax.to(sceneContainer, 0.8, {
-              top: "-80%",
+              top: "-85%",
               ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
             });
           },
@@ -318,35 +275,18 @@ var ITEManimate = {
       }
 
       animationTrigger1.click(function () {
-        if ($(this).attr("data-toggle") == "closed") {
-          $(this).attr("data-toggle", "opened");
-          openAnimation();
-        } else if ($(this).attr("data-toggle", "opened")) {
-          $(this).attr("data-toggle", "closed");
-          closeAnimation();
-        }
-        if (animationTrigger2.attr("data-toggle") == "closed") {
-          animationTrigger2.attr("data-toggle", "opened");
-          openAnimation();
-        } else if (animationTrigger2.attr("data-toggle", "opened")) {
-          animationTrigger2.attr("data-toggle", "closed");
-          closeAnimation();
-        }
+        animationTrigger2.fadeOut(400);
+        $(this).attr("data-toggle", "opened");
+        openAnimation();
       });
 
       animationTrigger2.click(function () {
+        animationTrigger2.fadeOut(400);
         if ($(this).attr("data-toggle") == "closed") {
           $(this).attr("data-toggle", "opened");
           openAnimation();
         } else if ($(this).attr("data-toggle", "opened")) {
           $(this).attr("data-toggle", "closed");
-          closeAnimation();
-        }
-        if (animationTrigger1.attr("data-toggle") == "closed") {
-          animationTrigger1.attr("data-toggle", "opened");
-          openAnimation();
-        } else if (animationTrigger1.attr("data-toggle", "opened")) {
-          animationTrigger1.attr("data-toggle", "closed");
           closeAnimation();
         }
       });
@@ -376,9 +316,9 @@ function animation() {
   title1.to(".button", 0, { visibility: "hidden", opacity: 0 });
   title1.staggerFromTo(
     ".main-home__title",
-    0.5,
-    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -120 },
-    { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 },
+    0.8,
+    { ease: Back.easeOut.config(5), opacity: 0, bottom: -120 },
+    { ease: Back.easeOut.config(5), opacity: 1, bottom: 0 },
     0.05
   );
 
@@ -399,3 +339,46 @@ function animation() {
   );
   title1.to(".button", 0.2, { visibility: "visible", opacity: 1 });
 }
+
+//TABS
+let tabs = document.querySelector(".tabs");
+let tabHeader = tabs.querySelector(".tabs__header");
+let tabBody = tabs.querySelector(".tabs__body");
+let tabIndicator = tabs.querySelector(".tabs__indicator");
+let tabHeaderNodes = tabs.querySelectorAll(".menu__link");
+let tabBodyNodes = tabs.querySelectorAll(".body__section");
+let worksButton = tabs.querySelector(".portfolio__btn");
+let worksSection = tabs.querySelector(".games");
+let worksLink = tabs.querySelector(".menu__works");
+let home = tabs.querySelector(".menu__home");
+
+for (let i = 0; i < tabHeaderNodes.length; i++) {
+  tabHeaderNodes[i].addEventListener("click", function () {
+    if (menuList.classList.contains("_show")) {
+      menuList.classList.toggle("_show");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    }
+    tabHeader.querySelector("._active").classList.remove("_active");
+    tabHeaderNodes[i].classList.add("_active");
+    tabBody.querySelector("._active").classList.remove("_active");
+    tabBodyNodes[i].classList.add("_active");
+    tabIndicator.style.left = `calc(calc(25% * ${i}) )`;
+    e.preventDefault(e);
+  });
+}
+
+worksButton.addEventListener("click", function (e) {
+  if (menuList.classList.contains("_show")) {
+    menuList.classList.toggle("_show");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-times");
+  }
+
+  tabHeader.querySelector("._active").classList.remove("_active");
+  worksLink.classList.add("_active");
+  tabBody.querySelector("._active").classList.remove("_active");
+  worksSection.classList.add("_active");
+  tabIndicator.style.left = `calc(calc(25%) )`;
+  e.preventDefault(e);
+});
