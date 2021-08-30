@@ -357,7 +357,7 @@ function animation() {
   title1.to(".button", 0, { visibility: "hidden", opacity: 0 });
   title1.staggerFromTo(
     ".main-home__title",
-    0.8,
+    0.4,
     { ease: Back.easeOut.config(5), opacity: 0, bottom: -120 },
     { ease: Back.easeOut.config(5), opacity: 1, bottom: 0 },
     0.05
@@ -365,7 +365,7 @@ function animation() {
 
   title1.staggerFromTo(
     ".main-home__subtitle",
-    0.5,
+    0.3,
     { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -120 },
     { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 },
     0.05
@@ -373,7 +373,7 @@ function animation() {
 
   title1.staggerFromTo(
     ".main-home__btn",
-    0.3,
+    0.2,
     { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -250 },
     { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 },
     0.05

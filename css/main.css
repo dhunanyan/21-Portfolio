@@ -1971,10 +1971,6 @@ canvas {
             transform: translateY(-40%) scale(0.6);
     background-color: transparent;
   }
-  .game__rank._active {
-    -webkit-transform: translate(35%, -70%);
-            transform: translate(35%, -70%);
-  }
   .game {
     margin: 50px 0;
   }
@@ -1989,10 +1985,6 @@ canvas {
   }
   .game {
     margin: 45px 40px;
-  }
-  .game__rank._active {
-    -webkit-transform: translate(30%, -61%);
-            transform: translate(30%, -61%);
   }
   .game__rank._active + .front + .back {
     -webkit-transform: translateY(40px);
