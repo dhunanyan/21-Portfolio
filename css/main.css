@@ -421,7 +421,7 @@ canvas {
   }
 }
 
-.home._active::-webkit-scrollbar {
+._active.home::-webkit-scrollbar {
   display: none;
   width: 0;
   background: transparent;
@@ -429,11 +429,16 @@ canvas {
   -webkit-appearance: none;
 }
 
+.home._active.body__section {
+  overflow: hidden;
+}
+
 .home {
   background-image: linear-gradient(130deg, #1cffb7, #0075ff);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: unset;
 }
 
 .home .main-home {
@@ -703,17 +708,39 @@ canvas {
 }
 
 .home .cover-wrapper {
+  display: table;
   width: 100%;
   height: 100%;
   min-height: 100%;
 }
 
-.home .slide-wrapper {
+.home .cover-wrapper__inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home .cover-wrapper__container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home section#nav {
+  height: 50px;
+}
+
+.home #home .slide-wrapper {
   background-image: linear-gradient(130deg, #d8984e, #d84e4e);
 }
 
 .home #home-content {
   z-index: 5;
+}
+
+.home #box1 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
 }
 
 .home #portfolio {
@@ -724,6 +751,15 @@ canvas {
   bottom: -100%;
   background-color: #414141;
   border-radius: 20px;
+}
+
+.home .preload {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1032;
+  background-color: #7752d5;
 }
 
 .home .circle {
@@ -758,6 +794,25 @@ canvas {
   height: 100px;
   margin-top: -50px;
   margin-left: -50px;
+}
+
+.home .spammer-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: green;
+}
+
+.home .spammer-container .spammer__content {
+  position: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: spamcolor 0.1s infinite;
+  -webkit-animation: spamcolor 0.1s infinite;
 }
 
 .home .smallcircles {
@@ -1243,6 +1298,10 @@ canvas {
   visibility: visible;
   pointer-events: all;
   overflow: auto;
+}
+
+.tabs .body__section.home._active {
+  overflow-x: hidden;
 }
 
 .games {

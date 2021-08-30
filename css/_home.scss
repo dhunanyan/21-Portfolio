@@ -45,7 +45,7 @@ $green: #2b9f5e;
 $yellow: #f1c83c;
 $shadow: #e75c5c;
 
-.home._active {
+._active.home {
   &::-webkit-scrollbar {
     display: none;
     width: 0;
@@ -55,9 +55,14 @@ $shadow: #e75c5c;
   }
 }
 
+.home._active.body__section {
+  overflow: hidden;
+}
+
 .home {
   background-image: linear-gradient(130deg, #1cffb7, #0075ff);
   display: flex;
+  overflow: unset;
 
   .main-home {
     display: flex;
@@ -265,17 +270,38 @@ $shadow: #e75c5c;
     box-shadow: 0 0px 20px 6px rgba(107, 187, 255, 0.45);
   }
   .cover-wrapper {
+    display: table;
     width: 100%;
     height: 100%;
     min-height: 100%;
   }
 
-  .slide-wrapper {
-    background-image: linear-gradient(130deg, #d8984e, #d84e4e);
+  .cover-wrapper__inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .cover-wrapper__container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  section#nav {
+    height: 50px;
+  }
+  #home {
+    .slide-wrapper {
+      background-image: linear-gradient(130deg, #d8984e, #d84e4e);
+    }
   }
 
   #home-content {
     z-index: 5;
+  }
+
+  #box1 {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
   }
 
   #portfolio {
@@ -286,6 +312,15 @@ $shadow: #e75c5c;
     bottom: -100%;
     background-color: #414141;
     border-radius: 20px;
+  }
+
+  .preload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1032;
+    background-color: #7752d5;
   }
 
   .circle {
@@ -319,6 +354,25 @@ $shadow: #e75c5c;
     height: 100px;
     margin-top: -50px;
     margin-left: -50px;
+  }
+
+  .spammer-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: green;
+
+    .spammer__content {
+      position: inherit;
+      width: 100%;
+      height: 100%;
+      display: block;
+      animation: spamcolor 0.1s infinite;
+      -webkit-animation: spamcolor 0.1s infinite;
+    }
   }
 
   .smallcircles {
