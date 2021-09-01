@@ -12,8 +12,8 @@ if (buttons.length > 0) {
 
       currentButton.classList.toggle("_active");
 
-      currentIcon.classList.toggle("fa-search-plus");
-      currentIcon.classList.toggle("fa-search-minus");
+      currentIcon.classList.toggle("fa-plus");
+      currentIcon.classList.toggle("fa-minus");
 
       const activeButtons = document.querySelectorAll(".game__rank._active");
 
@@ -21,13 +21,13 @@ if (buttons.length > 0) {
         activeButtons.forEach((activeButton) => {
           activeButton.classList.remove("_active");
           const activeIcon = activeButton.querySelector(".fas");
-          activeIcon.classList.toggle("fa-search-plus");
-          activeIcon.classList.toggle("fa-search-minus");
+          activeIcon.classList.toggle("fa-plus");
+          activeIcon.classList.toggle("fa-minus");
         });
         currentButton.classList.toggle("_active");
 
-        currentIcon.classList.toggle("fa-search-plus");
-        currentIcon.classList.toggle("fa-search-minus");
+        currentIcon.classList.toggle("fa-plus");
+        currentIcon.classList.toggle("fa-minus");
       }
     });
   });

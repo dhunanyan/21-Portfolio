@@ -13,17 +13,18 @@
   border-radius: 50px;
   box-shadow: 5px 10px 5px #5d8ab1;
   margin: auto;
-  padding-bottom: 26px;
 
   &__container {
-    overflow: auto;
-    height: 100%;
+    height: calc(100% - 88.18px);
+    margin: auto;
   }
 
   &__body {
     position: relative;
-    height: calc(100% - 60px);
-    padding: 30px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
   }
 
   .body {
