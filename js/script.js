@@ -357,24 +357,24 @@ function animation() {
   title1.to(".button", 0, { visibility: "hidden", opacity: 0 });
   title1.staggerFromTo(
     ".main-home__title",
-    0.4,
-    { ease: Back.easeOut.config(5), opacity: 0, bottom: -120 },
-    { ease: Back.easeOut.config(5), opacity: 1, bottom: 0 },
+    0.79,
+    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -500 },
+    { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 },
     0.05
   );
 
   title1.staggerFromTo(
     ".main-home__subtitle",
-    0.3,
-    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -120 },
+    0.79,
+    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -500 },
     { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 },
     0.05
   );
 
   title1.staggerFromTo(
     ".main-home__btn",
-    0.2,
-    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -250 },
+    0.5,
+    { ease: Back.easeOut.config(1.7), opacity: 0, bottom: -1000 },
     { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 },
     0.05
   );

@@ -1169,10 +1169,6 @@ canvas {
     font-size: 26px;
     letter-spacing: 2.5px;
   }
-  .home .main-home .trigger1 {
-    padding: 15px 20px;
-    font-size: 18px;
-  }
   .home .small-circle {
     width: 150px;
     height: 150px;
@@ -1430,7 +1426,7 @@ canvas {
           justify-content: center;
 }
 
-.game__rank:hover, .game__rank:focus {
+.game__rank:hover {
   -webkit-animation-name: wobble-top;
           animation-name: wobble-top;
   -webkit-animation-duration: 1s;
@@ -1446,9 +1442,39 @@ canvas {
           box-shadow: 0px 0px 16px 5px #1cffb7;
 }
 
+.game__rank:hover i {
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
+}
+
 .game__rank i {
   padding: 22px;
   font-size: 26px;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+
+.game__rank:not(._active):hover + .front {
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+  background-image: linear-gradient(130deg, #1cffb7, #0075ff);
+}
+
+.game__rank:not(._active) + .front {
+  background-image: linear-gradient(130deg, #d8984e, #d84e4e);
+}
+
+.game__rank:not(._active):hover + .front .front__bottom {
+  -webkit-animation-name: wobble-top;
+          animation-name: wobble-top;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
 }
 
 .game__background {
@@ -1471,8 +1497,11 @@ canvas {
 }
 
 .game__rank._active {
-  top: -33px;
-  right: -28px;
+  top: -32px;
+  right: -30px;
+  background-image: linear-gradient(130deg, #1cffb7, #0075ff);
+  -webkit-box-shadow: 0px 0px 16px 5px #1cffb7;
+          box-shadow: 0px 0px 16px 5px #1cffb7;
 }
 
 .game__rank._active i {
@@ -1486,11 +1515,11 @@ canvas {
   background-color: transparent;
 }
 
-.game__rank._active + .front > .front__stats {
+.game__rank._active + .front .front__bottom > .front__stats {
   opacity: 0;
 }
 
-.game__rank._active + .front > .front__name {
+.game__rank._active + .front .front__bottom > .front__name {
   -webkit-animation: gameName 250ms forwards;
           animation: gameName 250ms forwards;
   padding: 20px 0;
@@ -1507,6 +1536,19 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.game__rank._active:hover + .front + .back > .back__streamers {
+  -webkit-animation-name: wobble-top;
+          animation-name: wobble-top;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
 }
 
 .game__rank._active + .front + .back > .back__streamers {
@@ -1526,6 +1568,9 @@ canvas {
   -webkit-transition: var(--transition), opacity 100ms linear;
   transition: var(--transition), opacity 100ms linear;
   opacity: 1;
+  background-image: linear-gradient(130deg, #9457e2, #5029bb);
+  -webkit-box-shadow: 0 8px 20px 0 rgba(108, 79, 197, 0.44);
+          box-shadow: 0 8px 20px 0 rgba(108, 79, 197, 0.44);
 }
 
 .front {
@@ -1536,38 +1581,8 @@ canvas {
   border-radius: 20px;
   position: relative;
   z-index: 1;
-}
-
-.front--1 {
-  background-color: #008298;
-}
-
-.front--2 {
-  background-color: #62abfc;
-}
-
-.front--3 {
-  background-color: #ff8b38;
-}
-
-.front--4 {
-  background-color: #245852;
-}
-
-.front--5 {
-  background-color: #f25e68;
-}
-
-.front--6 {
-  background-color: #b07cf7;
-}
-
-.front--7 {
-  background-color: #fe767f;
-}
-
-.front--8 {
-  background-color: #ffdd99;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
 }
 
 .front__thumbnail {
@@ -1702,7 +1717,7 @@ canvas {
 }
 
 .back__btn--3 {
-  background-color: #ff8b38;
+  background-color: #ff9b51;
 }
 
 .back__btn--4 {
@@ -1777,6 +1792,8 @@ canvas {
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 16px 5px #1cffb7;
+          box-shadow: 0px 0px 16px 5px #1cffb7;
 }
 
 .back__streamers p {
@@ -2379,6 +2396,12 @@ canvas {
   }
   .scroll__figma {
     font-size: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__subtitle {
+    display: none;
   }
 }
 

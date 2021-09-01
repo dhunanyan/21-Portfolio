@@ -294,6 +294,14 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about {
+    &__subtitle {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 436px) {
   .scroll {
     &__item {
