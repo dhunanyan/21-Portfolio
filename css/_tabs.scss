@@ -62,3 +62,12 @@
     }
   }
 }
+
+@media (max-width: 526px) {
+  .tabs {
+    &__container {
+      height: calc(100% - 81px);
+      margin: auto;
+    }
+  }
+}

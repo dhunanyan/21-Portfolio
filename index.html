@@ -645,7 +645,7 @@
             <section class="body__section about">
               <div class="about__padding-container">
                 <div class="about__container">
-                  <div class="about__me me">
+                  <section class="about__me me">
                     <h1 class="about__title me__title">About Me</h1>
                     <div class="me__content">
                       <div class="me__content-left">
@@ -672,9 +672,9 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </section>
 
-                  <div class="about__slider-container">
+                  <section class="about__slider-container">
                     <div class="about__slider-content">
                       <h2 class="about__title">Skills</h2>
                       <h3 class="about__subtitle about__sbutitle--hide">(Shift + Scroll)</h3>
@@ -684,7 +684,7 @@
                       <div class="scroll">
                         <div class="scroll__inner">
                           <a href="#" class="scroll__item scroll__item--html">
-                            <h2 class="scroll__title">HTML</h2>
+                            <h2 class="scroll__title">HTML (BEM)</h2>
                             <p class="scroll__icon"><i class="fab fa-html5"></i></p>
                             <div class="scroll__dots">
                               <div class="scroll__dot scroll__dot--active"></div>
@@ -806,8 +806,24 @@
                       </div>
                       <button class="scroll__btn next" onclick="nextBtn()"></button>
                     </div>
-                  </div>
-              </div>
+                  </section>
+
+                  <section id="soft-skills-container">
+                    <h2 class="about__title soft-skills__title">Languages</h2>
+                    <div class="soft-skills" id="slider">
+                      <input type="radio" name="slider" id="s1" checked>
+                      <input type="radio" name="slider" id="s2">
+                      <input type="radio" name="slider" id="s3">
+                      <input type="radio" name="slider" id="s4">
+                      <input type="radio" name="slider" id="s5">
+                      <label class="soft-skills__slide" for="s1" id="slide1">English - fluent</label>
+                      <label class="soft-skills__slide" for="s2" id="slide2">Polish - fluent</label>
+                      <label class="soft-skills__slide" for="s3" id="slide3"> Russian - fluent</label>
+                      <label class="soft-skills__slide" for="s4" id="slide4">Armenian - native</label>
+                      <label class="soft-skills__slide" for="s5" id="slide5">French - intermediate</label>
+                    </div>
+                  </section>
+                </div>
               </div>
             </section>
             <section class="body__section about">
