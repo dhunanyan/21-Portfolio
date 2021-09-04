@@ -170,6 +170,7 @@
       line-height: 24px;
       width: calc(100% - 160px);
       padding: 20px 20px 20px 40px;
+      line-height: 26px;
       position: relative;
       left: 25%;
       transition: 250ms linear;
@@ -319,6 +320,252 @@
     font-weight: 400;
     font-family: "merienda";
   }
+
+  .soft-skills {
+    border-radius: 20px;
+    margin-top: 30px;
+    overflow: hidden;
+
+    &__container {
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      background: #e34040;
+      overflow: hidden;
+      transition: 1s;
+      padding: 30px;
+    }
+
+    &__card {
+      position: absolute;
+      left: 50%;
+      top: 100px;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px #333;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__subtitle {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0;
+      user-select: none;
+      font-size: 22px;
+    }
+
+    &__descr {
+      margin-top: 0;
+      font-weight: 400;
+      font-family: "Open Sans Condensed", sans-serif;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.64);
+      padding: 20px;
+      text-align: center;
+      margin: auto 0 calc(auto + 45.76px) 0;
+      user-select: none;
+      font-size: 18px;
+      font-style: italic;
+      color: #9c9c9c;
+    }
+
+    &__next {
+      position: absolute;
+      bottom: 10px;
+      right: 25px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 15px 20px;
+      border-radius: 20px;
+      transition: all 500ms ease-out;
+    }
+
+    &__prev {
+      position: absolute;
+      bottom: 10px;
+      left: 25px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 15px 20px;
+      border-radius: 20px;
+      transition: all 500ms ease-out;
+    }
+
+    &__card {
+      /* CARD 1 */
+      &--1 {
+        box-shadow: 0 8px 20px 0 rgba(213, 65, 51, 0.45);
+        background: #f6f6f6;
+        transition: 1s;
+
+        .soft-skills__subtitle,
+        .soft-skills__next,
+        .soft-skills__prev {
+          color: #e34040;
+        }
+
+        .soft-skills__next,
+        .soft-skills__prev {
+          &:hover {
+            color: #fff;
+            background-color: #e34040;
+            transition: all 500ms ease-out;
+          }
+        }
+      }
+
+      /* CARD 2 */
+      &--2 {
+        box-shadow: 0 8px 20px 0 rgba(73, 45, 114, 0.4);
+        background: #f6f6f6;
+        transform: translateX(-50%) scale(2);
+        margin: 1200px;
+        opacity: 1;
+        transition: 1.4s;
+
+        .soft-skills__subtitle,
+        .soft-skills__next,
+        .soft-skills__prev {
+          color: #9457e2;
+        }
+
+        .soft-skills__next,
+        .soft-skills__prev {
+          &:hover {
+            color: #fff;
+            background-color: #9457e2;
+            transition: all 500ms ease-out;
+          }
+        }
+
+        &.active {
+          opacity: 1;
+          margin: 0;
+          transform: translateX(-50%) scale(1) rotate(17deg);
+        }
+      }
+
+      /* CARD 3 */
+      &--3 {
+        box-shadow: 0 8px 20px 0 rgba(107, 187, 255, 0.45);
+        background: #f6f6f6;
+        transform: translateX(-50%) scale(2);
+        margin: -1200px;
+        transition: 1.4s;
+
+        .soft-skills__subtitle,
+        .soft-skills__next,
+        .soft-skills__prev {
+          color: #1cffb7;
+        }
+
+        .soft-skills__next,
+        .soft-skills__prev {
+          &:hover {
+            color: #fff;
+            background-color: #1cffb7;
+            transition: all 500ms ease-out;
+          }
+        }
+
+        &.active {
+          margin: 0;
+          transform: translateX(-60%) scale(1) rotate(-7deg);
+        }
+      }
+
+      /* CARD 4 */
+      &--4 {
+        box-shadow: 0 8px 20px 0 rgba(108, 79, 197, 0.44);
+        background: #f6f6f6;
+        transform: translateX(-50%) scale(2);
+        margin: 1000px;
+        transition: 1.4s;
+
+        .soft-skills__subtitle,
+        .soft-skills__next,
+        .soft-skills__prev {
+          color: #cc668d;
+        }
+
+        .soft-skills__next,
+        .soft-skills__prev {
+          &:hover {
+            color: #fff;
+            background-color: #cc668d;
+            transition: all 500ms ease-out;
+          }
+        }
+
+        &.active {
+          margin: 0;
+          transform: translateX(-60%) scale(1) rotate(6deg);
+        }
+      }
+
+      /* CARD 5 */
+      &--5 {
+        box-shadow: 0 8px 20px 0 rgba(107, 187, 255, 0.45);
+        background: #f6f6f6;
+        transform: translateX(-50%) scale(2);
+        margin: -1000px 1200px;
+        transition: 1.4s;
+
+        .soft-skills__subtitle,
+        .soft-skills__next,
+        .soft-skills__prev {
+          color: #2d8cf8;
+        }
+
+        .soft-skills__next,
+        .soft-skills__prev {
+          &:hover {
+            color: #fff;
+            background-color: #2d8cf8;
+            transition: all 500ms ease-out;
+          }
+        }
+
+        &.active {
+          margin: 0;
+          transform: translateX(-50%) scale(1) rotate(-12deg);
+        }
+      }
+
+      /* CARD 6 */
+      &--6 {
+        box-shadow: 0 8px 20px 0 rgba(73, 45, 114, 0.4);
+        background: #f6f6f6;
+        transform: translateX(-50%) scale(2);
+        margin: 1000px -1200px;
+        transition: 1.4s;
+
+        .soft-skills__subtitle,
+        .soft-skills__next,
+        .soft-skills__prev {
+          color: #9c4798;
+        }
+
+        .soft-skills__next,
+        .soft-skills__prev {
+          &:hover {
+            color: #fff;
+            background-color: #9c4798;
+            transition: all 500ms ease-out;
+          }
+        }
+
+        &.active {
+          margin: 0;
+          transform: translateX(-50%) scale(1) rotate(14deg);
+        }
+      }
+    }
+  }
 }
 
 .scroll {
@@ -387,7 +634,7 @@
     }
 
     &--blue {
-      background-image: linear-gradient(130deg, #1cffb7, #0075ff);
+      background-image: linear-gradient(130deg, #1cffb7, #1e83f7);
       box-shadow: 0 8px 20px 0 rgba(107, 187, 255, 0.45);
     }
 
@@ -538,7 +785,7 @@
   }
 }
 
-#soft-skills-container {
+#languages-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -553,7 +800,7 @@
   margin-top: 30px;
 }
 
-.soft-skills__title {
+.languages__title {
   margin: 0 auto 20px 0;
 }
 
@@ -742,12 +989,14 @@
 
           .me__descr {
             position: relative;
+            top: 0;
           }
         }
       }
 
       &__descr {
         width: 100%;
+        top: 75%;
         left: 0;
         padding: 30px;
         margin: 150px 0 0 0;

@@ -434,3 +434,60 @@ avatar.addEventListener("click", function (e) {
   card.classList.toggle("_active");
   subcontent.classList.toggle("_active");
 });
+
+//SOFT SKILLS
+
+let card1 = document.getElementById("card1"),
+  card2 = document.getElementById("card2"),
+  card3 = document.getElementById("card3"),
+  card4 = document.getElementById("card4"),
+  card5 = document.getElementById("card5"),
+  card6 = document.getElementById("card6"),
+  card_length = document.querySelectorAll(".soft-skills__card");
+
+// Container
+let container = document.getElementById("soft-skills__container");
+
+// Card List
+let card_list = [card1, card2, card3, card4, card5, card6];
+
+// Next function
+let counter = 1;
+function next() {
+  console.log("next:" + counter);
+  if (counter < card_length.length) {
+    card_list[counter].classList.add("active");
+    backgroundFunc(counter);
+    counter++;
+  } else {
+    counter = card_length.length;
+  }
+}
+
+function prev() {
+  if (counter > 1) {
+    card_list[counter - 1].classList.remove("active");
+    counter--;
+  } else {
+    counter = 1;
+  }
+  backgroundFunc(counter - 1);
+  console.log("prev:" + counter);
+}
+
+// Background function
+function backgroundFunc(x) {
+  if (x == 0) {
+    container.style.background = "#e34040";
+  } else if (x == 1) {
+    container.style.background = "#9457e2";
+  } else if (x == 2) {
+    container.style.background = "#1cffb7";
+  } else if (x == 3) {
+    container.style.background = "#cc668d";
+  } else if (x == 4) {
+    container.style.background = "#2d8cf8";
+  } else if (x == 5) {
+    container.style.background = "#9c4798";
+  }
+}

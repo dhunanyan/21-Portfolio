@@ -650,7 +650,8 @@
                     <div class="me__content">
                       <div class="me__card">
                         <div class="me__circle"></div>
-                        <div class="me__descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla illum natus nobis rem quis, velit saepe aliquid. Repellat, id impedit sit laudantium quo veritatis, voluptates, iusto similique dolorum ducimus ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam totam quia suscipit corrupti eligendi magnam accusamus obcaecati modi dolor autem laudantium tenetur officia, veritatis consequuntur nemo itaque ab quibusdam doloremque?</div>
+                        <div class="me__descr">A strong leader, who values personal integrity, methodical approaches, and a good team work. Proven experience with progressing responsibility, always open for new challenges. A dedicated change personality with a "can do" approach, continually developing himself and others. Motivated self-starter with a passion for digitisation and architectural design.
+                        </div>
                         <div class="me__avatar">
                           <div class="me__hover-container">
                             <p class="me__hover"><i class="fas fa-mouse-pointer"></i></p>
@@ -711,7 +712,7 @@
                             </div>
                           </a>
                           <a href="#" class="scroll__item scroll__item--js">
-                            <h2 class="scroll__title">JS</h2>
+                            <h2 class="scroll__title">JS + jQuery</h2>
                             <p class="scroll__icon">
                               <i class="fab fa-js"></i>
                             </p>
@@ -806,28 +807,78 @@
                     </div>
                   </section>
 
-                  <section id="soft-skills-container">
-                    <h2 class="about__title soft-skills__title">Languages</h2>
-                    <div class="soft-skills" id="slider">
+                  <section id="languages-container">
+                    <h2 class="about__title languages__title">Languages</h2>
+                    <div class="languages-skills" id="slider">
                       <input type="radio" name="slider" id="s1" checked>
                       <input type="radio" name="slider" id="s2">
                       <input type="radio" name="slider" id="s3">
                       <input type="radio" name="slider" id="s4">
                       <input type="radio" name="slider" id="s5">
-                      <label class="soft-skills__slide" for="s1" id="slide1">English - fluent</label>
-                      <label class="soft-skills__slide" for="s2" id="slide2">Polish - fluent</label>
-                      <label class="soft-skills__slide" for="s3" id="slide3"> Russian - fluent</label>
-                      <label class="soft-skills__slide" for="s4" id="slide4">Armenian - native</label>
-                      <label class="soft-skills__slide" for="s5" id="slide5">French - intermediate</label>
+                      <label class="languages__slide" for="s1" id="slide1">English - fluent</label>
+                      <label class="languages__slide" for="s2" id="slide2">Polish - fluent</label>
+                      <label class="languages__slide" for="s3" id="slide3">Russian - fluent</label>
+                      <label class="languages__slide" for="s4" id="slide4">Armenian - native</label>
+                      <label class="languages__slide" for="s5" id="slide5">French/Italian - intermediate</label>
+                    </div>
+                  </section>
+
+                  <section class="soft-skills">
+                    <div id="soft-skills__container" class="soft-skills__container">
+                      <div class="soft-skills__boxes">
+                          <!-- Card 1 -->
+                          <div class="soft-skills__card soft-skills__card--1" id="card1">
+                              <h2 class="soft-skills__subtitle">Communication</h2>
+                              <p class="soft-skills__descr">Ability to speak clearly, concisely and effectively, communicate own ideas clearly both verbally and in written. Strong and well expressed listening skills. Strong capability to deal with people in a way which shows sensitivity and tact</p>
+                              <button class="soft-skills__next" onclick="next()">NEXT</button>
+                          </div>
+              
+                          <!-- Card 2 -->
+                          <div class="soft-skills__card soft-skills__card--2" id="card2">
+                            <h2 class="soft-skills__subtitle">Leadership</h2>
+                            <p class="soft-skills__descr">Ability to demonstrate strong leadership, influencing & persuading skills. Excellent organisational skills.</p>
+                            <button class="soft-skills__prev" onclick="prev()">PREV</button>
+                            <button class="soft-skills__next" onclick="next()">NEXT</button>
+                          </div>
+              
+                          <!-- Card 3 -->
+                          <div class="soft-skills__card soft-skills__card--3" id="card3">
+                            <h2 class="soft-skills__subtitle">Resilience & Flexibility</h2>
+                            <p class="soft-skills__descr">Ability to work under time and stress pressure.</p>
+                            <button class="soft-skills__prev" onclick="prev()">PREV</button>
+                            <button class="soft-skills__next" onclick="next()">NEXT</button>
+                          </div>
+              
+                          <!-- Card 4 -->
+                          <div class="soft-skills__card soft-skills__card--4" id="card4">
+                            <h2 class="soft-skills__subtitle">Decision Making</h2>
+                            <p class="soft-skills__descr">Ability to make timely and effective decisions.</p>
+                            <button class="soft-skills__prev" onclick="prev()">PREV</button>
+                            <button class="soft-skills__next" onclick="next()">NEXT</button>
+                          </div>
+                          
+                          <!-- Card 5 -->
+                          <div class="soft-skills__card soft-skills__card--5" id="card5">
+                            <h2 class="soft-skills__subtitle">Change & Result Orientation</h2>
+                            <p class="soft-skills__descr">Positively challenging existing state in order to improve quality, adopting a ‘can do’ approach, strong change and result orientation.</p>
+                            <button class="soft-skills__prev" onclick="prev()">PREV</button>
+                            <button class="soft-skills__next" onclick="next()">NEXT</button>
+                          </div>
+
+                          <!-- Card 6 -->
+                          <div class="soft-skills__card soft-skills__card--6" id="card6">
+                            <h2 class="soft-skills__subtitle">Bigger Picture Vision / Detail Orientation</h2>
+                            <p class="soft-skills__descr">Ability to see bigger picture as well as strong attention to details. </p>
+                            <button class="soft-skills__prev" onclick="prev()">PREV</button>
+                          </div>
+              
+                      </div>
                     </div>
                   </section>
                 </div>
               </div>
             </section>
-            <section class="body__section about">
-              <div class="about__container">
-
-              </div>
+            <section class="body__section contact">
             </section>
           </main>
         </div>
