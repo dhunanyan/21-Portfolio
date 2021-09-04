@@ -423,3 +423,14 @@ worksButton.addEventListener("click", function (e) {
   tabIndicator.style.left = `calc(calc(25%) )`;
   e.preventDefault(e);
 });
+
+//ABOUT ME
+
+const avatar = document.querySelector(".me__avatar");
+const card = avatar.parentElement;
+const subcontent = document.querySelector(".me__subcontent");
+
+avatar.addEventListener("click", function (e) {
+  card.classList.toggle("_active");
+  subcontent.classList.toggle("_active");
+});

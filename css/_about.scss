@@ -76,12 +76,17 @@
 
   .me {
     width: 100%;
+    min-height: 580px;
     background-color: white;
     border-radius: 16px;
     padding: 20px;
     box-shadow: 0 6px 20px 0 rgba(202, 208, 216, 0.15);
     margin-bottom: 30px;
     background-image: linear-gradient(130deg, #ff771c, #fcee34);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
 
     &__title {
       color: #f1f1f1;
@@ -89,7 +94,73 @@
 
     &__content {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__card {
+      position: relative;
+      max-width: 1160px;
+      height: max-width;
+      min-height: 350px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      transition: all 500ms ease-out;
+
+      &._active {
+        position: relative;
+
+        margin: 0 170px 0 0;
+        transition: all 500ms ease-out;
+
+        .me__avatar {
+          left: 100%;
+          top: calc(50% + 15px);
+        }
+
+        .me__circle::before {
+          background-image: linear-gradient(130deg, #d8984e, #d84e4e);
+          box-shadow: 0px 0px 16px 5px #d84e4e;
+          clip-path: circle(600px at center);
+        }
+
+        .me__descr {
+          left: 0;
+          opacity: 1;
+          visibility: visible;
+          transition: left 1000ms ease-out 250ms, opacity 1000ms ease-out 250ms,
+            visibility 1000ms ease-out 250ms;
+        }
+      }
+
+      &._active + .me__subcontent > .me__name {
+        animation: neon3 1.5s ease-in-out infinite alternate;
+        color: #fff;
+      }
+    }
+
+    &__circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    &__circle::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(130deg, #ff771c, #fcee34);
+      clip-path: circle(120px at center);
+      transition: all 0.5s ease-out;
     }
 
     &__descr {
@@ -97,20 +168,20 @@
       font-size: 18px;
       font-weight: 500;
       line-height: 24px;
-    }
-
-    &__content-right {
-      margin: 0 0 0 20px;
-    }
-
-    &__subcontent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: calc(100% - 160px);
+      padding: 20px 20px 20px 40px;
+      position: relative;
+      left: 25%;
+      transition: 250ms linear;
+      opacity: 0;
+      visibility: hidden;
     }
 
     &__avatar {
-      position: relative;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 300px;
       height: 300px;
       box-sizing: border-box;
@@ -118,19 +189,17 @@
       border-radius: 50%;
       overflow: hidden;
       box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-      transform: translatey(0px);
+      transition: all 500ms ease-out;
       animation: float 6s ease-in-out infinite;
-
-      &:hover + .me__subcontent > .me__name,
-      &:focus + .me__subcontent > .me__name {
-        animation: neon3 1.5s ease-in-out infinite alternate;
-        color: #fff;
-      }
 
       img {
         width: 100%;
         height: auto;
       }
+    }
+
+    &__hover-container {
+      position: relative;
     }
 
     &__hover {
@@ -142,6 +211,19 @@
       font-weight: 700;
       color: #f1f1f1;
       width: max-content;
+      pointer-events: none;
+    }
+
+    &__subcontent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      bottom: 15px;
+
+      &._active {
+        position: static;
+      }
     }
 
     &__name {
@@ -228,6 +310,7 @@
     margin-bottom: 10px;
     font-weight: 700;
     font-family: "merienda";
+    margin-bottom: 20px;
   }
 
   &__subtitle {
@@ -598,15 +681,15 @@
 @keyframes float {
   0% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
+    transform: translate(-50%, -50%);
   }
   50% {
     box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(-30px);
+    transform: translate(-50%, calc(-50% - 30px));
   }
   100% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -637,55 +720,66 @@
       font-size: 140px;
     }
   }
-
-  .about {
-    .me {
-      &__content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      &__content-left {
-        order: 1;
-      }
-
-      &__content-right {
-        margin: 20px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
 }
 
 //ME
 
-@media (max-width: 620px) {
+@media (max-width: 880px) {
   .about {
     .me {
-      &__content-right {
-        margin: 30px 0 20px 0;
+      &__card {
+        width: calc(100% + 30px);
+        align-items: flex-start;
+
+        &._active {
+          min-height: 400px;
+          margin: 170px 0 0 0;
+
+          .me__avatar {
+            top: calc(0% + 15px);
+            left: 50%;
+          }
+
+          .me__descr {
+            position: relative;
+          }
+        }
+      }
+
+      &__descr {
+        width: 100%;
+        left: 0;
+        padding: 30px;
+        margin: 150px 0 0 0;
+        position: absolute;
       }
     }
   }
 }
 
-@media (max-width: 504px) {
+@media (max-width: 380px) {
   .about {
     .me {
+      &__card {
+        &._active {
+          .me__descr {
+            position: relative;
+          }
+        }
+      }
+
       &__avatar {
         width: 200px;
         height: 200px;
       }
-    }
-  }
-}
 
-@media (max-width: 768px) {
-  .about {
-    &__subtitle--hide {
-      display: none;
+      &__descr {
+        width: 100%;
+        left: 0;
+        padding: 30px;
+        margin: 100px 0 0 0;
+        position: absolute;
+      }
     }
   }
 }
