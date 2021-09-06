@@ -2406,6 +2406,10 @@ canvas {
   margin-bottom: 20px;
 }
 
+.about__title--white {
+  color: #f1f1f1;
+}
+
 .about__subtitle {
   font-size: 24px;
   margin-bottom: 10px;
@@ -3406,6 +3410,7 @@ canvas {
 }
 
 .contact__descr i {
+  display: inline-block;
   margin: 0 5px 0 0;
 }
 
@@ -3414,7 +3419,7 @@ canvas {
   display: inline-block;
   font-size: 24px;
   padding: 15px 20px;
-  margin: 40px 0 20px 0;
+  margin: 20px;
   text-transform: uppercase;
   color: #ff9213;
   overflow: hidden;
@@ -3423,6 +3428,8 @@ canvas {
   letter-spacing: 2.5px;
   border-radius: 5px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contact__button:hover {

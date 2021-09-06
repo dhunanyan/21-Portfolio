@@ -496,7 +496,7 @@ function backgroundFunc(x) {
 
 const contactContainer = document.querySelector(".contact__container");
 
-for (let i = 1; i <= 250; i++) {
+for (let i = 1; i <= 150; i++) {
   const block = document.createElement("div");
   block.classList.add("contact__block");
   contactContainer.appendChild(block);
@@ -519,7 +519,7 @@ function generate() {
     });
   }
 
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 768 && window.innerWidth >= 400) {
     anime({
       targets: ".contact__block",
       translateX: function () {
@@ -527,6 +527,22 @@ function generate() {
       },
       translateY: function () {
         return anime.random(-300, 300);
+      },
+      scale: function () {
+        return anime.random(1, 5);
+      },
+      duration: 2000,
+    });
+  }
+
+  if (window.innerWidth < 400) {
+    anime({
+      targets: ".contact__block",
+      translateX: function () {
+        return anime.random(-200, 200);
+      },
+      translateY: function () {
+        return anime.random(-250, 250);
       },
       scale: function () {
         return anime.random(1, 5);

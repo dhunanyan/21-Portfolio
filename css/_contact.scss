@@ -51,6 +51,7 @@
     }
 
     i {
+      display: inline-block;
       margin: 0 5px 0 0;
     }
   }
@@ -60,7 +61,7 @@
     display: inline-block;
     font-size: 24px;
     padding: 15px 20px;
-    margin: 40px 0 20px 0;
+    margin: 20px;
     text-transform: uppercase;
     color: #ff9213;
     overflow: hidden;
@@ -68,6 +69,7 @@
     letter-spacing: 2.5px;
     border-radius: 5px;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    box-sizing: border-box;
 
     &:hover {
       background-color: #ff9213;
