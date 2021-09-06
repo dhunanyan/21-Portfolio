@@ -121,44 +121,55 @@
       z-index: 2;
     }
 
-    &__list {
-      width: 100%;
-      pointer-events: none;
-      transition: top 350ms ease-out;
-      position: absolute;
-      top: -300%;
-      left: 0;
-      flex-direction: column;
-      z-index: 1;
-      padding-bottom: 5px;
-    }
-
-    &__list._show {
-      pointer-events: all;
-      padding-top: 5px;
-      transition: top 350ms ease-out;
-      top: 81px;
-    }
-
-    &__list::before {
+    &__body {
       content: "";
-      height: 252px;
+      height: calc(252px + 81px);
       width: 100%;
       background-color: #414141;
       position: absolute;
-      transition: top 1500ms ease-out 500ms;
+      transition: top 500ms ease-out;
       left: 0;
       top: -300%;
       z-index: -1;
     }
 
-    ._show.menu__list::before {
+    &__body._show {
       top: 0;
-      transition: top 100ms ease-out;
+      transition: top 500ms ease-out;
       transform: translateY(0) scale(1);
       border-radius: 0;
       width: 100%;
-      height: 100%;
+    }
+
+    &__list {
+      width: 100%;
+      pointer-events: none;
+      transition: 500ms ease-out;
+      position: absolute;
+      top: -10%;
+      left: 0;
+      flex-direction: column;
+      z-index: 1;
+      padding-bottom: 5px;
+
+      .menu__link {
+        transition: all 350ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    &__list._show {
+      top: 81px;
+      pointer-events: all;
+      padding-top: 5px;
+      transition: 500ms ease-out;
+
+      .menu__link {
+        transition: all 2000ms ease-out 100ms;
+        opacity: 1;
+        visibility: visible;
+      }
     }
 
     &__icon {
@@ -171,17 +182,11 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      opacity: 0;
-      transition: opacity 300ms ease-out;
       color: #fff;
 
       i {
         margin: 0 5px 0 0;
       }
-    }
-
-    &__list._show &__link {
-      opacity: 1;
     }
   }
 }
