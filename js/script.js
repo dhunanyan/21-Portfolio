@@ -399,6 +399,7 @@ for (let i = 0; i < tabHeaderNodes.length; i++) {
   tabHeaderNodes[i].addEventListener("click", function (e) {
     if (menuList.classList.contains("_show")) {
       menuList.classList.toggle("_show");
+      menuBody.classList.toggle("_show");
       icon.classList.toggle("fa-bars");
       icon.classList.toggle("fa-times");
     }
@@ -414,6 +415,7 @@ for (let i = 0; i < tabHeaderNodes.length; i++) {
 worksButton.addEventListener("click", function (e) {
   if (menuList.classList.contains("_show")) {
     menuList.classList.toggle("_show");
+    menuBody.classList.toggle("_show");
     icon.classList.toggle("fa-bars");
     icon.classList.toggle("fa-times");
   }
@@ -509,7 +511,7 @@ function generate() {
     anime({
       targets: ".contact__block",
       translateX: function () {
-        return anime.random(-600, 600);
+        return anime.random(-650, 650);
       },
       translateY: function () {
         return anime.random(-400, 400);
