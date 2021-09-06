@@ -329,9 +329,6 @@ canvas {
     left: 0;
     top: -300%;
     z-index: -1;
-    -webkit-transform: translate(100%, -100%) scale(0.5);
-            transform: translate(100%, -100%) scale(0.5);
-    border-radius: 100%;
   }
   .menu ._show.menu__list::before {
     top: 0;
