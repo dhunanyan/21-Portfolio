@@ -108,15 +108,7 @@
   }
 }
 
-@media (max-width: 526px) {
-  .menu {
-    &__link {
-      font-size: 14px;
-    }
-  }
-}
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 526px) {
   .menu {
     &:before {
       content: "";
@@ -138,6 +130,7 @@
       left: 0;
       flex-direction: column;
       z-index: 1;
+      padding-bottom: 5px;
     }
 
     &__list._show {
@@ -180,6 +173,7 @@
       justify-content: center;
       opacity: 0;
       transition: opacity 300ms ease-out;
+      color: #fff;
 
       i {
         margin: 0 5px 0 0;

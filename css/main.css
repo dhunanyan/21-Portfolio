@@ -280,13 +280,7 @@ canvas {
   transition: color 350ms ease-out;
 }
 
-@media (max-width: 526px) {
-  .menu__link {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 526px) {
   .menu:before {
     content: "";
     position: absolute;
@@ -310,6 +304,7 @@ canvas {
         -ms-flex-direction: column;
             flex-direction: column;
     z-index: 1;
+    padding-bottom: 5px;
   }
   .menu__list._show {
     pointer-events: all;
@@ -359,6 +354,7 @@ canvas {
     opacity: 0;
     -webkit-transition: opacity 300ms ease-out;
     transition: opacity 300ms ease-out;
+    color: #fff;
   }
   .menu__link i {
     margin: 0 5px 0 0;
