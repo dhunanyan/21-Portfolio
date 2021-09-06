@@ -165,3 +165,35 @@
     bottom: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .contact {
+    &__block {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .contact {
+    &__block {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__descr {
+      font-size: 16px;
+
+      i {
+        font-size: 16px;
+      }
+    }
+
+    &__button {
+      font-size: 16px;
+      padding: 10px 15px;
+      margin: 20px 0 0 0;
+    }
+  }
+}

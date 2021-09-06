@@ -3573,4 +3573,29 @@ canvas {
     bottom: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .contact__block {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact__block {
+    width: 30px;
+    height: 30px;
+  }
+  .contact__descr {
+    font-size: 16px;
+  }
+  .contact__descr i {
+    font-size: 16px;
+  }
+  .contact__button {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 20px 0 0 0;
+  }
+}
 /*# sourceMappingURL=main.css.map */

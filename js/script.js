@@ -503,18 +503,37 @@ for (let i = 1; i <= 250; i++) {
 }
 
 function generate() {
-  anime({
-    targets: ".contact__block",
-    translateX: function () {
-      return anime.random(-700, 700);
-    },
-    translateY: function () {
-      return anime.random(-700, 700);
-    },
-    scale: function () {
-      return anime.random(1, 5);
-    },
-  });
+  if (window.innerWidth >= 768) {
+    anime({
+      targets: ".contact__block",
+      translateX: function () {
+        return anime.random(-600, 600);
+      },
+      translateY: function () {
+        return anime.random(-400, 400);
+      },
+      scale: function () {
+        return anime.random(1, 5);
+      },
+      duration: 2000,
+    });
+  }
+
+  if (window.innerWidth < 768) {
+    anime({
+      targets: ".contact__block",
+      translateX: function () {
+        return anime.random(-400, 400);
+      },
+      translateY: function () {
+        return anime.random(-300, 300);
+      },
+      scale: function () {
+        return anime.random(1, 5);
+      },
+      duration: 2000,
+    });
+  }
 }
 
 generate();
