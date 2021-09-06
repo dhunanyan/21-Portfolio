@@ -3340,4 +3340,237 @@ canvas {
     left: 10px;
   }
 }
+
+.contact {
+  overflow: hidden;
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__block {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.contact__block:nth-child(3n + 2) {
+  background-color: #444;
+}
+
+.contact__block:nth-child(3n + 3) {
+  background-color: #ff9213;
+}
+
+.contact__content {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 8px 20px 0 rgba(227, 169, 55, 0.45);
+          box-shadow: 0 8px 20px 0 rgba(227, 169, 55, 0.45);
+}
+
+.contact__descr {
+  margin: 10px auto 0 0;
+}
+
+.contact__descr:first-of-type {
+  margin-top: 0;
+}
+
+.contact__descr i {
+  margin: 0 5px 0 0;
+}
+
+.contact__button {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  padding: 15px 20px;
+  margin: 40px 0 20px 0;
+  text-transform: uppercase;
+  color: #ff9213;
+  overflow: hidden;
+  -webkit-transition: 500ms ease-out;
+  transition: 500ms ease-out;
+  letter-spacing: 2.5px;
+  border-radius: 5px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.contact__button:hover {
+  background-color: #ff9213;
+  color: #ddd;
+  -webkit-box-shadow: 0 0 5px #ff9213, 0 0 25px #ff9213, 0 0 50px #ff9213, 0 0 200px #ff9213;
+          box-shadow: 0 0 5px #ff9213, 0 0 25px #ff9213, 0 0 50px #ff9213, 0 0 200px #ff9213;
+}
+
+.contact__button span {
+  position: absolute;
+  display: block;
+}
+
+.contact__button span:nth-of-type(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#ff9213));
+  background: linear-gradient(90deg, transparent, #ff9213);
+  -webkit-animation: animate1 1s linear infinite;
+          animation: animate1 1s linear infinite;
+}
+
+.contact__button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#ff9213));
+  background: linear-gradient(180deg, transparent, #ff9213);
+  -webkit-animation: animate2 1s linear infinite;
+          animation: animate2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.contact__button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#ff9213));
+  background: linear-gradient(270deg, transparent, #ff9213);
+  -webkit-animation: animate3 1s linear infinite;
+          animation: animate3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.contact__button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#ff9213));
+  background: linear-gradient(360deg, transparent, #ff9213);
+  -webkit-animation: animate4 1s linear infinite;
+          animation: animate4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
 /*# sourceMappingURL=main.css.map */

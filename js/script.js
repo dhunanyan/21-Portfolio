@@ -394,7 +394,7 @@ let worksLink = tabs.querySelector(".menu__works");
 let home = tabs.querySelector(".menu__home");
 
 for (let i = 0; i < tabHeaderNodes.length; i++) {
-  tabHeaderNodes[i].addEventListener("click", function () {
+  tabHeaderNodes[i].addEventListener("click", function (e) {
     if (menuList.classList.contains("_show")) {
       menuList.classList.toggle("_show");
       icon.classList.toggle("fa-bars");
@@ -491,3 +491,30 @@ function backgroundFunc(x) {
     container.style.background = "#9c4798";
   }
 }
+
+//CONTACT
+
+const contactContainer = document.querySelector(".contact__container");
+
+for (let i = 1; i <= 250; i++) {
+  const block = document.createElement("div");
+  block.classList.add("contact__block");
+  contactContainer.appendChild(block);
+}
+
+function generate() {
+  anime({
+    targets: ".contact__block",
+    translateX: function () {
+      return anime.random(-700, 700);
+    },
+    translateY: function () {
+      return anime.random(-700, 700);
+    },
+    scale: function () {
+      return anime.random(1, 5);
+    },
+  });
+}
+
+generate();
