@@ -332,7 +332,7 @@
       min-height: 500px;
       background: #e34040;
       overflow: hidden;
-      transition: 1s;
+      transition: background 1000ms ease-out 850ms;
       padding: 30px;
     }
 
@@ -1106,6 +1106,38 @@
       width: 180px;
       height: 220px;
       font-size: 24px;
+    }
+  }
+}
+
+//SOFT SKILLS
+
+@media (max-width: 536px) {
+  .about {
+    .soft-skills {
+      &__card {
+        width: 200px;
+        height: 300px;
+        padding: 10px;
+      }
+
+      &__subtitle {
+        font-size: 22px;
+      }
+
+      &__descr {
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 0;
+      }
+
+      &__next {
+        right: 10px;
+      }
+
+      &__prev {
+        left: 10px;
+      }
     }
   }
 }
