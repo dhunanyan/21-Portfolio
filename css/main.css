@@ -3435,6 +3435,7 @@ canvas {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font: inherit;
 }
 
 .contact__button:hover {
