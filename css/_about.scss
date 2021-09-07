@@ -126,7 +126,7 @@
           clip-path: circle(600px at center);
         }
 
-        .me__descr {
+        .me__card-content {
           left: 0;
           opacity: 1;
           visibility: visible;
@@ -163,13 +163,13 @@
       transition: all 0.5s ease-out;
     }
 
-    &__descr {
+    &__card-content {
       color: #f1f1f1;
       font-size: 18px;
       font-weight: 500;
       line-height: 24px;
       width: calc(100% - 160px);
-      padding: 20px 20px 20px 40px;
+      padding: 20px;
       line-height: 26px;
       position: relative;
       left: 25%;
@@ -180,7 +180,7 @@
 
     &__avatar {
       position: absolute;
-      top: 50%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 300px;
@@ -199,6 +199,43 @@
       }
     }
 
+    &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    &__button {
+      min-width: 191px;
+      display: inline-block;
+      font-size: 18px;
+      padding: 10px 15px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      color: #fcea4a;
+      box-shadow: 0px 0px 16px 5px #fcea4a;
+      overflow: hidden;
+      transition: 500ms ease-out;
+      letter-spacing: 2.5px;
+      border-radius: 5px;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      box-sizing: border-box;
+      font: inherit;
+
+      &:first-of-type {
+        margin-right: 20px;
+      }
+
+      &:hover {
+        background-image: linear-gradient(130deg, #fcea4a, #cb6906);
+        box-shadow: 0px 0px 16px 5px #fcea4a;
+        color: #ddd;
+        box-shadow: 0 0 5px #fcea4a, 0 0 25px #fcea4a, 0 0 50px #fcea4a,
+          0 0 200px #fcea4a;
+      }
+    }
+
     &__hover-container {
       position: relative;
     }
@@ -207,8 +244,8 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 24px;
+      transform: translate(-50%, -50%) rotate(-11.25deg);
+      font-size: 28px;
       font-weight: 700;
       color: #f1f1f1;
       width: max-content;
@@ -219,12 +256,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: absolute;
-      bottom: 15px;
-
-      &._active {
-        position: static;
-      }
     }
 
     &__name {
@@ -312,10 +343,6 @@
     font-weight: 700;
     font-family: "merienda";
     margin-bottom: 20px;
-
-    &--white {
-      color: #f1f1f1;
-    }
   }
 
   &__subtitle {
@@ -323,6 +350,10 @@
     margin-bottom: 10px;
     font-weight: 400;
     font-family: "merienda";
+
+    &--white {
+      color: #f1f1f1;
+    }
   }
 
   .soft-skills {
@@ -1002,9 +1033,31 @@
         width: 100%;
         top: 75%;
         left: 0;
-        padding: 30px;
         margin: 150px 0 0 0;
         position: absolute;
+      }
+
+      &__card-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    .me {
+      &__buttons {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &__button {
+        margin: 30px 0 0 0;
+
+        &:first-of-type {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -1029,7 +1082,6 @@
       &__descr {
         width: 100%;
         left: 0;
-        padding: 30px;
         margin: 100px 0 0 0;
         position: absolute;
       }

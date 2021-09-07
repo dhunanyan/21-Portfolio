@@ -59,6 +59,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -2180,7 +2181,7 @@ canvas {
           clip-path: circle(600px at center);
 }
 
-.about .me__card._active .me__descr {
+.about .me__card._active .me__card-content {
   left: 0;
   opacity: 1;
   visibility: visible;
@@ -2218,13 +2219,13 @@ canvas {
   transition: all 0.5s ease-out;
 }
 
-.about .me__descr {
+.about .me__card-content {
   color: #f1f1f1;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   width: calc(100% - 160px);
-  padding: 20px 20px 20px 40px;
+  padding: 20px;
   line-height: 26px;
   position: relative;
   left: 25%;
@@ -2236,7 +2237,7 @@ canvas {
 
 .about .me__avatar {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2260,6 +2261,52 @@ canvas {
   height: auto;
 }
 
+.about .me__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.about .me__button {
+  min-width: 191px;
+  display: inline-block;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: #fcea4a;
+  -webkit-box-shadow: 0px 0px 16px 5px #fcea4a;
+          box-shadow: 0px 0px 16px 5px #fcea4a;
+  overflow: hidden;
+  -webkit-transition: 500ms ease-out;
+  transition: 500ms ease-out;
+  letter-spacing: 2.5px;
+  border-radius: 5px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: inherit;
+}
+
+.about .me__button:first-of-type {
+  margin-right: 20px;
+}
+
+.about .me__button:hover {
+  background-image: linear-gradient(130deg, #fcea4a, #cb6906);
+  -webkit-box-shadow: 0px 0px 16px 5px #fcea4a;
+          box-shadow: 0px 0px 16px 5px #fcea4a;
+  color: #ddd;
+  -webkit-box-shadow: 0 0 5px #fcea4a, 0 0 25px #fcea4a, 0 0 50px #fcea4a, 0 0 200px #fcea4a;
+          box-shadow: 0 0 5px #fcea4a, 0 0 25px #fcea4a, 0 0 50px #fcea4a, 0 0 200px #fcea4a;
+}
+
 .about .me__hover-container {
   position: relative;
 }
@@ -2268,9 +2315,9 @@ canvas {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 24px;
+  -webkit-transform: translate(-50%, -50%) rotate(-11.25deg);
+          transform: translate(-50%, -50%) rotate(-11.25deg);
+  font-size: 28px;
   font-weight: 700;
   color: #f1f1f1;
   width: -webkit-max-content;
@@ -2290,12 +2337,6 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  bottom: 15px;
-}
-
-.about .me__subcontent._active {
-  position: static;
 }
 
 .about .me__name {
@@ -2411,15 +2452,15 @@ canvas {
   margin-bottom: 20px;
 }
 
-.about__title--white {
-  color: #f1f1f1;
-}
-
 .about__subtitle {
   font-size: 24px;
   margin-bottom: 10px;
   font-weight: 400;
   font-family: "merienda";
+}
+
+.about__subtitle--white {
+  color: #f1f1f1;
 }
 
 .about .soft-skills {
@@ -3239,9 +3280,29 @@ canvas {
     width: 100%;
     top: 75%;
     left: 0;
-    padding: 30px;
     margin: 150px 0 0 0;
     position: absolute;
+  }
+  .about .me__card-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about .me__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .me__button {
+    margin: 30px 0 0 0;
+  }
+  .about .me__button:first-of-type {
+    margin-right: 0;
   }
 }
 
@@ -3256,7 +3317,6 @@ canvas {
   .about .me__descr {
     width: 100%;
     left: 0;
-    padding: 30px;
     margin: 100px 0 0 0;
     position: absolute;
   }

@@ -61,6 +61,7 @@ body {
   background-image: linear-gradient(135deg, #3a82c0, #164f82);
   height: calc(100vh - 60px);
   display: flex;
+  overflow: hidden;
 }
 
 .wrapper {

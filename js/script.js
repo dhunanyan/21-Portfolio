@@ -1,4 +1,5 @@
 "use strict";
+
 //CARDS
 
 const buttons = document.querySelectorAll(".game__rank");
