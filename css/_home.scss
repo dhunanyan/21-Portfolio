@@ -83,7 +83,7 @@ $shadow: #e75c5c;
       }
 
       p {
-        margin: 120px 0 0 auto;
+        margin: 30px 0 0 auto;
       }
     }
 
@@ -680,7 +680,7 @@ $shadow: #e75c5c;
     .main-home {
       &__content {
         p {
-          margin: 70px 0 0 auto;
+          margin: 30px 0 0 auto;
         }
       }
 
@@ -712,14 +712,9 @@ $shadow: #e75c5c;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .home {
     .main-home {
-      &__content {
-        p {
-          margin: 50px 0 0 auto;
-        }
-      }
 
       &__title {
         font-size: 46px;
@@ -729,6 +724,11 @@ $shadow: #e75c5c;
       &__subtitle {
         font-size: 26px;
         letter-spacing: 2.5px;
+      }
+
+      .btn {
+        padding: 15px 20px;
+        font-size: 18px;
       }
     }
 
@@ -748,9 +748,6 @@ $shadow: #e75c5c;
   .home {
     .main-home {
       &__content {
-        p {
-          margin: 50px auto 0 auto;
-        }
         left: -10px;
       }
 
@@ -762,11 +759,6 @@ $shadow: #e75c5c;
       &__subtitle {
         max-width: 150px;
         letter-spacing: 2.5px;
-      }
-
-      .trigger2 {
-        padding: 15px 20px;
-        font-size: 18px;
       }
     }
 
