@@ -2149,7 +2149,7 @@ canvas {
   position: relative;
   max-width: 1160px;
   height: max-width;
-  min-height: 350px;
+  min-height: 320px;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2163,6 +2163,7 @@ canvas {
 
 .about .me__card._active {
   position: relative;
+  min-height: 350px;
   margin: 0 170px 0 0;
   -webkit-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
@@ -2237,7 +2238,7 @@ canvas {
 
 .about .me__avatar {
   position: absolute;
-  top: 60%;
+  top: calc(50% + 15px);
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -3306,7 +3307,10 @@ canvas {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 440px) {
+  .about .me__card {
+    min-height: 250px;
+  }
   .about .me__card._active .me__descr {
     position: relative;
   }
@@ -3375,8 +3379,8 @@ canvas {
 
 @media (max-width: 534px) {
   #slider label {
-    width: 180px;
-    height: 220px;
+    width: 220px;
+    height: 250px;
     font-size: 24px;
   }
 }
