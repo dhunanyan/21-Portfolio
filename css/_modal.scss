@@ -17,19 +17,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-            
-    ::-webkit-scrollbar {
-        width: 20px; /* width of the entire scrollbar */
-    }
-    
-    ::-webkit-scrollbar-track {
-        background: #aaa; /* color of the tracking area */
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background-color: #303030; /* color of the scroll thumb */
-        border-radius: 20px; /* roundness of the scroll thumb */
-    }
 
     &._active{
         transform: translate(-50%, -50%) scale(1);

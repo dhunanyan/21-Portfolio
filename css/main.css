@@ -171,23 +171,6 @@ canvas {
           justify-content: center;
 }
 
-.modal ::-webkit-scrollbar {
-  width: 20px;
-  /* width of the entire scrollbar */
-}
-
-.modal ::-webkit-scrollbar-track {
-  background: #aaa;
-  /* color of the tracking area */
-}
-
-.modal ::-webkit-scrollbar-thumb {
-  background-color: #303030;
-  /* color of the scroll thumb */
-  border-radius: 20px;
-  /* roundness of the scroll thumb */
-}
-
 .modal._active {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
