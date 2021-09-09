@@ -139,6 +139,124 @@ canvas {
   z-index: -1;
 }
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  border: 1px solid #000;
+  border-radius: 20px;
+  z-index: 10000000;
+  background-color: #303030;
+  color: #f1f1f1;
+  height: 800px;
+  max-height: 90%;
+  width: 1300px;
+  max-width: 90%;
+  -webkit-transition: 350ms ease-out;
+  transition: 350ms ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal ::-webkit-scrollbar {
+  width: 20px;
+  /* width of the entire scrollbar */
+}
+
+.modal ::-webkit-scrollbar-track {
+  background: #aaa;
+  /* color of the tracking area */
+}
+
+.modal ::-webkit-scrollbar-thumb {
+  background-color: #303030;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+}
+
+.modal._active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.modal__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal__close {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.modal__body {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__pdf {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  -webkit-transition: 350ms ease-out;
+  transition: 350ms ease-out;
+  z-index: 1000000;
+}
+
+.overlay._active {
+  pointer-events: all;
+  opacity: 1;
+}
+
 .tabs__indicator {
   position: absolute;
   left: 0;
@@ -652,11 +770,14 @@ canvas {
   font-size: 28px;
   position: relative;
   font-weight: 700;
-  display: inline-block;
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
   font-family: "bubble";
   letter-spacing: 2.5px;
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -675,6 +796,11 @@ canvas {
           animation-iteration-count: 1;
   -webkit-transition: all 350ms ease-out;
   transition: all 350ms ease-out;
+}
+
+.home .btn._fade {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .home .btn i {

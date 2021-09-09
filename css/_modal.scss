@@ -1,0 +1,92 @@
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid #000;
+    border-radius: 20px;
+    z-index: 10000000;
+    background-color: #303030;
+    color: #f1f1f1;
+    height: 800px;
+    max-height: 90%;
+    width: 1300px;
+    max-width: 90%;
+    transition: 350ms ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+            
+    ::-webkit-scrollbar {
+        width: 20px; /* width of the entire scrollbar */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #aaa; /* color of the tracking area */
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #303030; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+    }
+
+    &._active{
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #000;
+        width: 100%;
+        height: max-content;
+    }
+
+    &__title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__close{
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 24px;
+        font-weight: 700;
+        color: #f1f1f1;
+    }
+
+    &__body{
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__pdf{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+}
+
+.overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    transition: 350ms ease-out;
+    z-index: 1000000;
+
+    &._active{
+        pointer-events: all;
+        opacity: 1;
+    }
+}

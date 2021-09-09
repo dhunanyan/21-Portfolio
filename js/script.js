@@ -1,5 +1,40 @@
 "use strict";
 
+//MODALS
+
+const openModalButton = document.querySelector('[data-modal-target]');
+const closeModalButton = document.querySelector('[data-close-button]');
+const overlay = document.querySelector('.overlay');
+
+openModalButton.addEventListener('click', ()=>{
+  const modal = document.querySelector(openModalButton.dataset.modalTarget);
+  openModal(modal);
+});
+
+overlay.addEventListener('click', ()=>{
+  const modals = document.querySelectorAll('.modal._active');
+  modals.forEach(modal => {
+    closeModal(modal);
+  });
+});
+
+closeModalButton.addEventListener('click', ()=>{
+  const modal = closeModalButton.closest('.modal');
+  closeModal(modal);
+});
+
+function openModal(modal){
+  if(modal == null) return 
+  modal.classList.add('_active')
+  overlay.classList.add('_active');  
+}
+
+function closeModal(modal){
+  if(modal == null) return 
+  modal.classList.remove('_active')
+  overlay.classList.remove('_active');  
+}
+
 //CARDS
 
 const buttons = document.querySelectorAll(".game__rank");
@@ -229,7 +264,7 @@ var ITEManimate = {
 
           onComplete: function () {
             console.log(sceneContainer);
-            if (window.innerWidth >= 1400) {
+            if (window.innerWidth >= 768 || window.innerHeight >= 800) {
               TweenMax.to(portfolioContainer, 1.8, {
                 width: "100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
@@ -242,20 +277,20 @@ var ITEManimate = {
               });
             }
 
-            if (window.innerWidth < 1400) {
+            if ((window.innerWidth > 480 && window.innerWidth < 768) || window.innerHeight < 800) {
               TweenMax.to(portfolioContainer, 1.8, {
                 width: "100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
-                top: "20%",
+                top: "15%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
               });
               TweenMax.to(sceneContainer, 0.8, {
-                top: "-90%",
+                top: "-92%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
               });
             }
 
-            if (window.innerWidth <= 480) {
+            if (window.innerWidth > 360 && window.innerWidth <= 480) {
               TweenMax.to(portfolioContainer, 1.8, {
                 width: "100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
@@ -319,13 +354,13 @@ var ITEManimate = {
       }
 
       animationTrigger1.click(function () {
-        animationTrigger2.fadeOut(400);
+        animationTrigger2.addClass('_fade');
         $(this).attr("data-toggle", "opened");
         openAnimation();
       });
 
       animationTrigger2.click(function () {
-        animationTrigger2.fadeOut(400);
+        animationTrigger2.addClass('_fade');
         if ($(this).attr("data-toggle") == "closed") {
           $(this).attr("data-toggle", "opened");
           openAnimation();
@@ -342,11 +377,6 @@ var ITEManimate = {
 })($);
 
 //TEXT ANIMATION
-
-$(document).ready(function () {
-  $(".main-home__title").lettering();
-});
-
 $(document).ready(function () {
   animation();
 }, 300);
