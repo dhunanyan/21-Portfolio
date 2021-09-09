@@ -12,26 +12,41 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <div class="modal" id="modal-en">
-      <div class="modal__header">
-        <h2 class="modal__title">CV (English)</h2>
-        <button data-close-button class="modal__close"><i class="fas fa-times"></i></button>
+  <body class="_blue-theme">
+    <section class="colors">
+      <div class="colors__accordion">
+        <div class="colors__container">
+          <button class="colors__label"><i class="colors__icon fas fa-paint-brush"></i></button>
+          <div class="colors__content">
+            <div class="colors__color colors__color--blue"></div>
+            <div class="colors__color colors__color--orange"></div>
+            <div class="colors__color colors__color--red"></div>
+            <div class="colors__color colors__color--yellow"></div>
+          </div>
+        </div>
       </div>
-      <div class="modal__body">
-        <iframe class="modal__pdf" src="https://drive.google.com/file/d/1divrZfYlb3braVpvDw_aBfqVnA2BY-s0/preview" allow="autoplay"></iframe>
+    </section>
+    <section class="modals">
+      <div class="modal" id="modal-en">
+        <div class="modal__header">
+          <h2 class="modal__title">CV (English)</h2>
+          <button data-close-button class="modal__close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__body">
+          <iframe class="modal__pdf" src="https://drive.google.com/file/d/1divrZfYlb3braVpvDw_aBfqVnA2BY-s0/preview" allow="autoplay"></iframe>
+        </div>
       </div>
-    </div>
-    <div class="modal" id="modal-pl">
-      <div class="modal__header">
-        <h2 class="modal__title">CV (Polish)</h2>
-        <button data-close-button class="modal__close"><i class="fas fa-times"></i></button>
+      <div class="modal" id="modal-pl">
+        <div class="modal__header">
+          <h2 class="modal__title">CV (Polish)</h2>
+          <button data-close-button class="modal__close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__body">
+          <iframe class="modal__pdf" src="https://drive.google.com/file/d/1-UeEUWOQczVIHRNcwFZgqLb03kngL9Oa/preview" allow="autoplay"></iframe>
+        </div>
       </div>
-      <div class="modal__body">
-        <iframe class="modal__pdf" src="https://drive.google.com/file/d/1-UeEUWOQczVIHRNcwFZgqLb03kngL9Oa/preview" allow="autoplay"></iframe>
-      </div>
-    </div>
-    <div class="overlay"></div>
+      <div class="overlay"></div>
+    </section>
     <div class="wrapper">
       <section class="tabs">
         <div class="flex-container">
@@ -687,8 +702,7 @@
                         </div>
                       </div>
                       <div class="me__subcontent">
-                        <h3 class="me__name">Davit Hunanyan</h3>
-                        <p class="me__follow">Follow me on:</p>
+                        <h2 class="me__name">Davit Hunanyan</h2>
                         <div class="me__socials socials">
                           <a href="#" class="socials__link"><i class="fab fa-facebook"></i></a>
                           <a href="#" class="socials__link"><i class="fab fa-instagram"></i></a>
@@ -700,7 +714,7 @@
 
                   <section class="about__slider-container">
                     <div class="about__slider-content">
-                      <h2 class="about__title">Skills</h2>
+                      <h2 class="about__title">Software Skills</h2>
                       <h3 class="about__subtitle about__subtitle--hide">(Shift + Scroll)</h3>
                     </div>
                     <div class="scroll__wrapper">

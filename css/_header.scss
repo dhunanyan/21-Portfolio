@@ -5,13 +5,13 @@
     top: 0;
     width: calc(100% / 4);
     height: 5px;
-    background: #00acee;
+    background: $icons-indicator-scrollbar-blue;
     border-radius: 5px;
     transition: left 350ms ease-out;
   }
 
   &__indicator-container {
-    background-color: #303030;
+    background-color: #414141;
     position: relative;
     height: 5px;
   }
@@ -103,7 +103,7 @@
   }
 
   &__link._active {
-    color: #00acee;
+    color: $icons-indicator-scrollbar-blue;
     transition: color 350ms ease-out;
   }
 }

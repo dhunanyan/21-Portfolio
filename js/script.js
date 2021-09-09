@@ -1,4 +1,70 @@
 "use strict";
+//COLORS
+const accordion = document.querySelector('.colors__container');
+const colorLabel = document.querySelector('.colors__label')
+
+colorLabel.addEventListener('click', function(){
+  accordion.classList.toggle('_show-colors');
+})
+
+const colorBlue = document.querySelector('.colors__color--blue');
+const colorOrange = document.querySelector('.colors__color--orange');
+const colorRed = document.querySelector('.colors__color--red');
+const colorYellow = document.querySelector('.colors__color--yellow');
+const colors = document.querySelectorAll('.colors__color');
+const body = document.querySelector('body');
+
+colorBlue.addEventListener('click', function(){
+  if(body.classList.contains('_purple-theme')){
+    body.classList.remove('_purple-theme');
+  }
+  if(body.classList.contains('_red-theme')){
+    body.classList.remove('_red-theme');
+  }
+  if(body.classList.contains('_yellow-theme')){
+    body.classList.remove('_yellow-theme');
+  }
+  body.classList.add('_blue-theme');
+});
+
+colorOrange.addEventListener('click', function(){
+  if(body.classList.contains('_blue-theme')){
+    body.classList.remove('_blue-theme');
+  }
+  if(body.classList.contains('_red-theme')){
+    body.classList.remove('_red-theme');
+  }
+  if(body.classList.contains('_yellow-theme')){
+    body.classList.remove('_yellow-theme');
+  }
+  body.classList.add('_orange-theme');
+});
+
+colorRed.addEventListener('click', function(){
+  if(body.classList.contains('_purple-theme')){
+    body.classList.remove('_purple-theme');
+  }
+  if(body.classList.contains('_blue-theme')){
+    body.classList.remove('_blue-theme');
+  }
+  if(body.classList.contains('_yellow-theme')){
+    body.classList.remove('_yellow-theme');
+  }
+  body.classList.add('_red-theme');
+});
+
+colorYellow.addEventListener('click', function(){
+  if(body.classList.contains('_purple-theme')){
+    body.classList.remove('_purple-theme');
+  }
+  if(body.classList.contains('_red-theme')){
+    body.classList.remove('_red-theme');
+  }
+  if(body.classList.contains('_blue-theme')){
+    body.classList.remove('_blue-theme');
+  }
+  body.classList.add('_yellow-theme');
+});
 
 //MODALS
 
@@ -358,13 +424,13 @@ var ITEManimate = {
       }
 
       animationTrigger1.click(function () {
-        animationTrigger2.addClass('_fade');
+        animationTrigger2.css({"opacity": "0", "pointer-events": "none"});
         $(this).attr("data-toggle", "opened");
         openAnimation();
       });
 
       animationTrigger2.click(function () {
-        animationTrigger2.addClass('_fade');
+        animationTrigger2.css({"opacity": "0", "pointer-events": "none"});
         if ($(this).attr("data-toggle") == "closed") {
           $(this).attr("data-toggle", "opened");
           openAnimation();
@@ -428,6 +494,9 @@ let tabBodyNodes = tabs.querySelectorAll(".body__section");
 let worksButton = tabs.querySelector(".portfolio__btn");
 let worksSection = tabs.querySelector(".games");
 let worksLink = tabs.querySelector(".menu__works");
+let contactButton = tabs.querySelector(".portfolio__contact");
+let contactSection = tabs.querySelector(".contact");
+let contactLink = tabs.querySelector(".menu__contact");
 let home = tabs.querySelector(".menu__home");
 
 for (let i = 0; i < tabHeaderNodes.length; i++) {
@@ -460,6 +529,22 @@ worksButton.addEventListener("click", function (e) {
   tabBody.querySelector("._active").classList.remove("_active");
   worksSection.classList.add("_active");
   tabIndicator.style.left = `calc(calc(25%) )`;
+  e.preventDefault(e);
+});
+
+contactButton.addEventListener("click", function (e) {
+  if (menuList.classList.contains("_show")) {
+    menuList.classList.toggle("_show");
+    menuBody.classList.toggle("_show");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-times");
+  }
+
+  tabHeader.querySelector("._active").classList.remove("_active");
+  contactLink.classList.add("_active");
+  tabBody.querySelector("._active").classList.remove("_active");
+  contactSection.classList.add("_active");
+  tabIndicator.style.left = `calc(calc(75%) )`;
   e.preventDefault(e);
 });
 

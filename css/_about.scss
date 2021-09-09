@@ -10,7 +10,7 @@
   &::-webkit-scrollbar-thumb {
     background-color: #303030; /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
-    border: 5px solid #00acee; /* creates padding around scroll thumb */
+    border: 5px solid $icons-indicator-scrollbar-blue; /* creates padding around scroll thumb */
   }
 
   .scroll__wrapper {
@@ -103,7 +103,7 @@
       position: relative;
       max-width: 1160px;
       height: max-width;
-      min-height: 320px;
+      min-height: 300px;
       border-radius: 20px;
       display: flex;
       align-items: center;
@@ -111,7 +111,7 @@
 
       &._active {
         position: relative;
-        min-height: 350px;
+        min-height: 330px;
 
         margin: 0 170px 0 0;
         transition: all 500ms ease-out;
@@ -184,8 +184,8 @@
       top: calc(50% + 15px);
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 300px;
-      height: 300px;
+      width: 280px;
+      height: 280px;
       box-sizing: border-box;
       border: 5px #fcea4a solid;
       border-radius: 50%;
@@ -345,6 +345,10 @@
     font-weight: 700;
     font-family: "merienda";
     margin-bottom: 20px;
+
+    &--white{
+      color: #f1f1f1;
+    }
   }
 
   &__subtitle {

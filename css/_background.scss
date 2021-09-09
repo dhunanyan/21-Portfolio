@@ -1,5 +1,194 @@
-canvas {
-  border: 1px soild black;
-  position: absolute;
-  z-index: -1;
+.colors{
+
+  &__accordion{
+    width: 40px;
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 100000;
+  }
+
+  &__container{
+    position: relative;
+
+    &._show-colors{
+      .colors__content{
+        height: 172px;
+      }
+    }
+  }
+
+  &__label{
+    position: relative;
+    background-color: #f1f1f1;
+    color: #303030;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 100%;
+    height: 40px;
+    font: inherit;
+    font-size: 24px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 800ms linear;
+    z-index: 1000002;
+    padding: 5px;
+
+    i{
+      pointer-events: none;
+
+      &::before{
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__content{
+    position: relative;
+    height: 0;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    transition: 800ms;
+    top: -25px;
+    z-index: 100001;
+    padding-top: 25px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+  }
+
+  &__color{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+
+    &--blue{
+      background-image: linear-gradient(135deg, #3a82c0, #164f82);
+    }
+
+    &--orange{
+      background-image: linear-gradient(135deg, #fa9b43, #ff8e25);
+    }
+
+    &--red{
+      background-image: linear-gradient(135deg, rgb(243, 49, 42), rgb(192, 50, 7));
+    }
+
+    &--yellow{
+      background-image: linear-gradient(130deg, #ffe561, #ffd24c);
+    }
+  }
+}
+
+body._blue-theme{
+  transition: 500ms ease-out;
+}
+
+body._orange-theme{
+  transition: 500ms ease-out;
+  background-color: $background-orange;
+
+  //TABS
+  .tabs {
+    box-shadow: 5px 10px 5px $box-shadow-orange;
+
+    &__indicator {
+      background: $icons-indicator-scrollbar-orange;
+    }
+  }
+
+  //HEADER
+  .menu{
+    &__link._active {
+      color: $icons-indicator-scrollbar-orange;
+    }
+  }
+
+  //CARDS
+  .games._active {
+    &::-webkit-scrollbar-thumb {
+      border: 5px solid $icons-indicator-scrollbar-orange;
+    }
+  }
+
+  //ABOUT
+  ._active.about {
+    &::-webkit-scrollbar-thumb {
+      border: 5px solid $icons-indicator-scrollbar-orange;
+    }
+  }
+}
+
+body._red-theme{
+  transition: 500ms ease-out;
+  background-color: $background-red;
+
+  //TABS
+  .tabs {
+    box-shadow: 5px 10px 5px $box-shadow-red;
+
+    &__indicator {
+      background: $icons-indicator-scrollbar-red;
+    }
+  }
+
+  //HEADER
+  .menu{
+    &__link._active {
+      color: $icons-indicator-scrollbar-red;
+    }
+  }
+
+  //CARDS
+  .games._active {
+    &::-webkit-scrollbar-thumb {
+      border: 5px solid $icons-indicator-scrollbar-red;
+    }
+  }
+
+  //ABOUT
+  ._active.about {
+    &::-webkit-scrollbar-thumb {
+      border: 5px solid $icons-indicator-scrollbar-red;
+    }
+  }
+}
+
+body._yellow-theme{
+  transition: 500ms ease-out;
+  background-color: $background-yellow;
+
+  //TABS
+  .tabs {
+    box-shadow: 5px 10px 5px $box-shadow-yellow;
+
+    &__indicator {
+      background: $icons-indicator-scrollbar-yellow;
+    }
+  }
+
+  //HEADER
+  .menu{
+    &__link._active {
+      color: $icons-indicator-scrollbar-yellow;
+    }
+  }
+
+  //CARDS
+  .games._active {
+    &::-webkit-scrollbar-thumb {
+      border: 5px solid $icons-indicator-scrollbar-yellow;
+    }
+  }
+
+  //ABOUT
+  ._active.about {
+    &::-webkit-scrollbar-thumb {
+      border: 5px solid $icons-indicator-scrollbar-yellow;
+    }
+  }
 }

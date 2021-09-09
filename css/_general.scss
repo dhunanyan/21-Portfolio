@@ -56,12 +56,30 @@
   --dot-small: 14px;
 }
 
+$background-blue: #164f82;
+$icons-indicator-scrollbar-blue: #00acee;
+$box-shadow-blue: #5d8ab1;
+$background-orange: #ff8e25;
+$icons-indicator-scrollbar-orange: #faa251;
+$box-shadow-orange: #b16b3d;
+$background-red: #c03207;
+$icons-indicator-scrollbar-red: #f84c46;
+$box-shadow-red: #a75c45;
+$background-yellow: #ffd24c;
+$icons-indicator-scrollbar-yellow: #ffe771;
+$box-shadow-yellow: #b9a156;
+
 body {
   font-family: "gotham";
-  background-image: linear-gradient(135deg, #3a82c0, #164f82);
+  background-color: $background-blue;
   height: calc(100vh - 60px);
   display: flex;
   overflow: hidden;
+  transition: 500ms ease-out;
+}
+
+button{
+  font-family: "gotham";
 }
 
 .wrapper {

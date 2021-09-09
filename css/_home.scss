@@ -188,6 +188,25 @@ $shadow: #e75c5c;
       font-family: "merienda";
       font-weight: 700;
     }
+    
+    &__contact{
+      display: inline-block;
+      font-size: 24px;
+      text-transform: uppercase;
+      padding: 0 5px;
+      font-weight: 700;
+      color: #303030;
+      overflow: hidden;
+      border-radius: 20px;
+      box-sizing: border-box;
+      font: 'gotham';
+      background-color: #a7a7a7;
+      transition: 350ms ease-out;
+      
+      &:hover{
+        transform: scale(1.15);
+      }
+    }
 
     &__descr {
       font-size: 28px;
