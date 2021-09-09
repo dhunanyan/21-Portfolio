@@ -13,13 +13,22 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="modal" id="modal">
+    <div class="modal" id="modal-en">
       <div class="modal__header">
         <h2 class="modal__title">CV (English)</h2>
         <button data-close-button class="modal__close"><i class="fas fa-times"></i></button>
       </div>
       <div class="modal__body">
         <embed class="modal__pdf" src="pdf/cv-english.pdf#toolbar=0" type="application/pdf">
+      </div>
+    </div>
+    <div class="modal" id="modal-pl">
+      <div class="modal__header">
+        <h2 class="modal__title">CV (Polish)</h2>
+        <button data-close-button class="modal__close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal__body">
+        <embed class="modal__pdf" src="pdf/cv-polish.pdf#toolbar=0" type="application/pdf">
       </div>
     </div>
     <div class="overlay"></div>
@@ -664,8 +673,8 @@
                         <div class="me__card-content">
                           <p class="me__descr">A strong leader, who values personal integrity, methodical approaches, and a good team work. Proven experience with progressing responsibility, always open for new challenges. A dedicated change personality with a "can do" approach, continually developing himself and others. Motivated self-starter with a passion for digitisation and architectural design.</p>
                           <div class="me__buttons">
-                            <button data-modal-target="#modal" class="me__button">CV (English)</button>
-                            <button class="me__button">CV (Polish)</button>
+                            <button data-modal-target="#modal-en" class="me__button">CV (English)</button>
+                            <button data-modal-target="#modal-pl" class="me__button">CV (Polish)</button>
                           </div>
                         </div>
                         <div class="me__avatar">

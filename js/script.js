@@ -2,13 +2,22 @@
 
 //MODALS
 
-const openModalButton = document.querySelector('[data-modal-target]');
-const closeModalButton = document.querySelector('[data-close-button]');
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.querySelector('.overlay');
 
-openModalButton.addEventListener('click', ()=>{
-  const modal = document.querySelector(openModalButton.dataset.modalTarget);
-  openModal(modal);
+openModalButtons.forEach(openModalButton => {
+  openModalButton.addEventListener('click', ()=>{
+    const modal = document.querySelector(openModalButton.dataset.modalTarget);
+    openModal(modal);
+  });
+});
+
+closeModalButtons.forEach(closeModalButton => {
+  closeModalButton.addEventListener('click', ()=>{
+    const modal = closeModalButton.closest('.modal');
+    closeModal(modal);
+  });
 });
 
 overlay.addEventListener('click', ()=>{
@@ -16,11 +25,6 @@ overlay.addEventListener('click', ()=>{
   modals.forEach(modal => {
     closeModal(modal);
   });
-});
-
-closeModalButton.addEventListener('click', ()=>{
-  const modal = closeModalButton.closest('.modal');
-  closeModal(modal);
 });
 
 function openModal(modal){
