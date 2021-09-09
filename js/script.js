@@ -15,8 +15,8 @@ const colors = document.querySelectorAll('.colors__color');
 const body = document.querySelector('body');
 
 colorBlue.addEventListener('click', function(){
-  if(body.classList.contains('_purple-theme')){
-    body.classList.remove('_purple-theme');
+  if(body.classList.contains('_orange-theme')){
+    body.classList.remove('_orange-theme');
   }
   if(body.classList.contains('_red-theme')){
     body.classList.remove('_red-theme');
@@ -41,8 +41,8 @@ colorOrange.addEventListener('click', function(){
 });
 
 colorRed.addEventListener('click', function(){
-  if(body.classList.contains('_purple-theme')){
-    body.classList.remove('_purple-theme');
+  if(body.classList.contains('_orange-theme')){
+    body.classList.remove('_orange-theme');
   }
   if(body.classList.contains('_blue-theme')){
     body.classList.remove('_blue-theme');
@@ -54,8 +54,8 @@ colorRed.addEventListener('click', function(){
 });
 
 colorYellow.addEventListener('click', function(){
-  if(body.classList.contains('_purple-theme')){
-    body.classList.remove('_purple-theme');
+  if(body.classList.contains('_orange-theme')){
+    body.classList.remove('_orange-theme');
   }
   if(body.classList.contains('_red-theme')){
     body.classList.remove('_red-theme');
