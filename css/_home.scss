@@ -202,7 +202,7 @@ $shadow: #e75c5c;
       font: 'gotham';
       background-color: #a7a7a7;
       transition: 350ms ease-out;
-      
+
       &:hover{
         transform: scale(1.15);
       }
@@ -657,6 +657,10 @@ $shadow: #e75c5c;
         font-size: 16px;
         line-height: 22px;
         margin: 10px 0 20px 0;
+      }
+
+      &__contact{
+        font-size: 16px;
       }
 
       &__btn {

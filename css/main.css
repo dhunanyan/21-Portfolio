@@ -1237,6 +1237,9 @@ button {
     line-height: 22px;
     margin: 10px 0 20px 0;
   }
+  .home .portfolio__contact {
+    font-size: 16px;
+  }
   .home .portfolio__btn {
     padding: 15px 20px;
     font-size: 18px;
