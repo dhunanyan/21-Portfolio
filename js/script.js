@@ -229,7 +229,7 @@ var ITEManimate = {
 
           onComplete: function () {
             console.log(sceneContainer);
-            if (window.innerWidth >= 636) {
+            if (window.innerWidth >= 1400) {
               TweenMax.to(portfolioContainer, 1.8, {
                 width: "100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
@@ -242,7 +242,7 @@ var ITEManimate = {
               });
             }
 
-            if (window.innerWidth <= 636) {
+            if (window.innerWidth < 1400) {
               TweenMax.to(portfolioContainer, 1.8, {
                 width: "100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
