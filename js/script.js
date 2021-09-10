@@ -1,108 +1,108 @@
 "use strict";
 //COLORS
-const accordion = document.querySelector('.colors__container');
-const colorLabel = document.querySelector('.colors__label')
+const accordion = document.querySelector(".colors__container");
+const colorLabel = document.querySelector(".colors__label");
 
-colorLabel.addEventListener('click', function(){
-  accordion.classList.toggle('_show-colors');
-})
-
-const colorBlue = document.querySelector('.colors__color--blue');
-const colorOrange = document.querySelector('.colors__color--orange');
-const colorRed = document.querySelector('.colors__color--red');
-const colorYellow = document.querySelector('.colors__color--yellow');
-const colors = document.querySelectorAll('.colors__color');
-const body = document.querySelector('body');
-
-colorBlue.addEventListener('click', function(){
-  if(body.classList.contains('_orange-theme')){
-    body.classList.remove('_orange-theme');
-  }
-  if(body.classList.contains('_red-theme')){
-    body.classList.remove('_red-theme');
-  }
-  if(body.classList.contains('_yellow-theme')){
-    body.classList.remove('_yellow-theme');
-  }
-  body.classList.add('_blue-theme');
+colorLabel.addEventListener("click", function () {
+  accordion.classList.toggle("_show-colors");
 });
 
-colorOrange.addEventListener('click', function(){
-  if(body.classList.contains('_blue-theme')){
-    body.classList.remove('_blue-theme');
+const colorBlue = document.querySelector(".colors__color--blue");
+const colorOrange = document.querySelector(".colors__color--orange");
+const colorRed = document.querySelector(".colors__color--red");
+const colorYellow = document.querySelector(".colors__color--yellow");
+const colors = document.querySelectorAll(".colors__color");
+const body = document.querySelector("body");
+
+colorBlue.addEventListener("click", function () {
+  if (body.classList.contains("_orange-theme")) {
+    body.classList.remove("_orange-theme");
   }
-  if(body.classList.contains('_red-theme')){
-    body.classList.remove('_red-theme');
+  if (body.classList.contains("_red-theme")) {
+    body.classList.remove("_red-theme");
   }
-  if(body.classList.contains('_yellow-theme')){
-    body.classList.remove('_yellow-theme');
+  if (body.classList.contains("_yellow-theme")) {
+    body.classList.remove("_yellow-theme");
   }
-  body.classList.add('_orange-theme');
+  body.classList.add("_blue-theme");
 });
 
-colorRed.addEventListener('click', function(){
-  if(body.classList.contains('_orange-theme')){
-    body.classList.remove('_orange-theme');
+colorOrange.addEventListener("click", function () {
+  if (body.classList.contains("_blue-theme")) {
+    body.classList.remove("_blue-theme");
   }
-  if(body.classList.contains('_blue-theme')){
-    body.classList.remove('_blue-theme');
+  if (body.classList.contains("_red-theme")) {
+    body.classList.remove("_red-theme");
   }
-  if(body.classList.contains('_yellow-theme')){
-    body.classList.remove('_yellow-theme');
+  if (body.classList.contains("_yellow-theme")) {
+    body.classList.remove("_yellow-theme");
   }
-  body.classList.add('_red-theme');
+  body.classList.add("_orange-theme");
 });
 
-colorYellow.addEventListener('click', function(){
-  if(body.classList.contains('_orange-theme')){
-    body.classList.remove('_orange-theme');
+colorRed.addEventListener("click", function () {
+  if (body.classList.contains("_orange-theme")) {
+    body.classList.remove("_orange-theme");
   }
-  if(body.classList.contains('_red-theme')){
-    body.classList.remove('_red-theme');
+  if (body.classList.contains("_blue-theme")) {
+    body.classList.remove("_blue-theme");
   }
-  if(body.classList.contains('_blue-theme')){
-    body.classList.remove('_blue-theme');
+  if (body.classList.contains("_yellow-theme")) {
+    body.classList.remove("_yellow-theme");
   }
-  body.classList.add('_yellow-theme');
+  body.classList.add("_red-theme");
+});
+
+colorYellow.addEventListener("click", function () {
+  if (body.classList.contains("_orange-theme")) {
+    body.classList.remove("_orange-theme");
+  }
+  if (body.classList.contains("_red-theme")) {
+    body.classList.remove("_red-theme");
+  }
+  if (body.classList.contains("_blue-theme")) {
+    body.classList.remove("_blue-theme");
+  }
+  body.classList.add("_yellow-theme");
 });
 
 //MODALS
 
-const openModalButtons = document.querySelectorAll('[data-modal-target]');
-const closeModalButtons = document.querySelectorAll('[data-close-button]');
-const overlay = document.querySelector('.overlay');
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.querySelector(".overlay");
 
-openModalButtons.forEach(openModalButton => {
-  openModalButton.addEventListener('click', ()=>{
+openModalButtons.forEach((openModalButton) => {
+  openModalButton.addEventListener("click", () => {
     const modal = document.querySelector(openModalButton.dataset.modalTarget);
     openModal(modal);
   });
 });
 
-closeModalButtons.forEach(closeModalButton => {
-  closeModalButton.addEventListener('click', ()=>{
-    const modal = closeModalButton.closest('.modal');
+closeModalButtons.forEach((closeModalButton) => {
+  closeModalButton.addEventListener("click", () => {
+    const modal = closeModalButton.closest(".modal");
     closeModal(modal);
   });
 });
 
-overlay.addEventListener('click', ()=>{
-  const modals = document.querySelectorAll('.modal._active');
-  modals.forEach(modal => {
+overlay.addEventListener("click", () => {
+  const modals = document.querySelectorAll(".modal._active");
+  modals.forEach((modal) => {
     closeModal(modal);
   });
 });
 
-function openModal(modal){
-  if(modal == null) return 
-  modal.classList.add('_active')
-  overlay.classList.add('_active');  
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add("_active");
+  overlay.classList.add("_active");
 }
 
-function closeModal(modal){
-  if(modal == null) return 
-  modal.classList.remove('_active')
-  overlay.classList.remove('_active');  
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove("_active");
+  overlay.classList.remove("_active");
 }
 
 //CARDS
@@ -347,7 +347,10 @@ var ITEManimate = {
               });
             }
 
-            if ((window.innerWidth > 480 && window.innerWidth < 768) || window.innerHeight < 800) {
+            if (
+              (window.innerWidth > 480 && window.innerWidth < 768) ||
+              window.innerHeight < 800
+            ) {
               TweenMax.to(portfolioContainer, 1.8, {
                 width: "100%",
                 ease: ITEManimate.bezier(0.93, 0.035, 0.35, 0.815),
@@ -424,13 +427,13 @@ var ITEManimate = {
       }
 
       animationTrigger1.click(function () {
-        animationTrigger2.css({"opacity": "0", "pointer-events": "none"});
+        animationTrigger2.css({ opacity: "0", "pointer-events": "none" });
         $(this).attr("data-toggle", "opened");
         openAnimation();
       });
 
       animationTrigger2.click(function () {
-        animationTrigger2.css({"opacity": "0", "pointer-events": "none"});
+        animationTrigger2.css({ opacity: "0", "pointer-events": "none" });
         if ($(this).attr("data-toggle") == "closed") {
           $(this).attr("data-toggle", "opened");
           openAnimation();
@@ -507,9 +510,24 @@ for (let i = 0; i < tabHeaderNodes.length; i++) {
       icon.classList.toggle("fa-bars");
       icon.classList.toggle("fa-times");
     }
-    tabHeader.querySelector("._active").classList.remove("_active");
-    tabHeaderNodes[i].classList.add("_active");
-    tabBody.querySelector("._active").classList.remove("_active");
+    const tabHeaderActiveNodes = document.querySelectorAll(
+      ".menu__link._active"
+    );
+    tabHeaderActiveNodes.forEach((tabHeaderActiveNode) => {
+      if (tabHeaderActiveNode.classList.contains("_active")) {
+        tabHeaderActiveNode.classList.remove("_active");
+      }
+    });
+    e.target.classList.add("_active");
+
+    const tabBodyActiveNodes = document.querySelectorAll(
+      ".body__section._active"
+    );
+    tabBodyActiveNodes.forEach((tabBodyActiveNode) => {
+      if (tabBodyActiveNode.classList.contains("_active")) {
+        tabBodyActiveNode.classList.remove("_active");
+      }
+    });
     tabBodyNodes[i].classList.add("_active");
     tabIndicator.style.left = `calc(calc(25% * ${i}) )`;
     e.preventDefault(e);
@@ -524,9 +542,9 @@ worksButton.addEventListener("click", function (e) {
     icon.classList.toggle("fa-times");
   }
 
-  tabHeader.querySelector("._active").classList.remove("_active");
+  tabHeader.querySelector(".menu__link._active").classList.remove("_active");
   worksLink.classList.add("_active");
-  tabBody.querySelector("._active").classList.remove("_active");
+  tabBody.querySelector(".body__section._active").classList.remove("_active");
   worksSection.classList.add("_active");
   tabIndicator.style.left = `calc(calc(25%) )`;
   e.preventDefault(e);
@@ -540,9 +558,9 @@ contactButton.addEventListener("click", function (e) {
     icon.classList.toggle("fa-times");
   }
 
-  tabHeader.querySelector("._active").classList.remove("_active");
+  tabHeader.querySelector(".menu__link._active").classList.remove("_active");
   contactLink.classList.add("_active");
-  tabBody.querySelector("._active").classList.remove("_active");
+  tabBody.querySelector(".body__section._active").classList.remove("_active");
   contactSection.classList.add("_active");
   tabIndicator.style.left = `calc(calc(75%) )`;
   e.preventDefault(e);
