@@ -62,8 +62,8 @@ $box-shadow-blue: #5d8ab1;
 $background-orange: #ff8e25;
 $icons-indicator-scrollbar-orange: #faa251;
 $box-shadow-orange: #b16b3d;
-$background-red: #c03207;
-$icons-indicator-scrollbar-red: #f84c46;
+$background-red: #f84c46;
+$icons-indicator-scrollbar-red: #f56863;
 $box-shadow-red: #a75c45;
 $background-yellow: #ffd24c;
 $icons-indicator-scrollbar-yellow: #ffe771;
@@ -78,7 +78,7 @@ body {
   transition: 500ms ease-out;
 }
 
-button{
+button {
   font-family: "gotham";
 }
 

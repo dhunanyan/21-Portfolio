@@ -1839,13 +1839,11 @@ button {
   border-radius: 100vw;
   margin: 10px 0;
   font-size: 18px;
-  -webkit-animation: Content 250ms forwards;
-          animation: Content 250ms forwards;
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
   background-image: linear-gradient(130deg, #1cffb7, #0075ff);
   -webkit-box-shadow: 0px 0px 16px 5px #1cffb7;
           box-shadow: 0px 0px 16px 5px #1cffb7;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
 }
 
 .back__btn:hover {
@@ -1932,118 +1930,20 @@ button {
   }
 }
 
-@-webkit-keyframes Content {
+@-webkit-keyframes btnFade {
   0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
     opacity: 0;
   }
-  10% {
-    -webkit-transform: translateY(45%);
-            transform: translateY(45%);
-    opacity: 0.1;
-  }
-  20% {
-    -webkit-transform: translateY(40%);
-            transform: translateY(40%);
-    opacity: 0.2;
-  }
-  30% {
-    -webkit-transform: translateY(35%);
-            transform: translateY(35%);
-    opacity: 0.3;
-  }
-  40% {
-    -webkit-transform: translateY(30%);
-            transform: translateY(30%);
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%);
-    opacity: 0.5;
-  }
-  60% {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
-    opacity: 0.6;
-  }
-  70% {
-    -webkit-transform: translateY(15%);
-            transform: translateY(15%);
-    opacity: 0.7;
-  }
-  80% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-    opacity: 0.8;
-  }
-  90% {
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
-    opacity: 0.9;
-  }
   100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
     opacity: 1;
   }
 }
 
-@keyframes Content {
+@keyframes btnFade {
   0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
     opacity: 0;
   }
-  10% {
-    -webkit-transform: translateY(45%);
-            transform: translateY(45%);
-    opacity: 0.1;
-  }
-  20% {
-    -webkit-transform: translateY(40%);
-            transform: translateY(40%);
-    opacity: 0.2;
-  }
-  30% {
-    -webkit-transform: translateY(35%);
-            transform: translateY(35%);
-    opacity: 0.3;
-  }
-  40% {
-    -webkit-transform: translateY(30%);
-            transform: translateY(30%);
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%);
-    opacity: 0.5;
-  }
-  60% {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
-    opacity: 0.6;
-  }
-  70% {
-    -webkit-transform: translateY(15%);
-            transform: translateY(15%);
-    opacity: 0.7;
-  }
-  80% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-    opacity: 0.8;
-  }
-  90% {
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
-    opacity: 0.9;
-  }
   100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -3926,7 +3826,7 @@ body._orange-theme ._active.about::-webkit-scrollbar-thumb {
 body._red-theme {
   -webkit-transition: 500ms ease-out;
   transition: 500ms ease-out;
-  background-color: #c03207;
+  background-color: #f84c46;
 }
 
 body._red-theme .tabs {
@@ -3935,19 +3835,19 @@ body._red-theme .tabs {
 }
 
 body._red-theme .tabs__indicator {
-  background: #f84c46;
+  background: #f56863;
 }
 
 body._red-theme .menu__link._active {
-  color: #f84c46;
+  color: #f56863;
 }
 
 body._red-theme .games._active::-webkit-scrollbar-thumb {
-  border: 5px solid #f84c46;
+  border: 5px solid #f56863;
 }
 
 body._red-theme ._active.about::-webkit-scrollbar-thumb {
-  border: 5px solid #f84c46;
+  border: 5px solid #f56863;
 }
 
 body._yellow-theme {
