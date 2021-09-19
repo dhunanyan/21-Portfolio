@@ -109,7 +109,8 @@ function closeModal(modal) {
 
 const buttons = document.querySelectorAll(".game__rank");
 const icons = document.querySelectorAll(".fas");
-let activeButtons = 0;
+const gamesContainer = document.querySelector(".games__quit-container");
+
 if (buttons.length > 0) {
   buttons.forEach((button) => {
     button.addEventListener("click", function (e) {
@@ -135,6 +136,17 @@ if (buttons.length > 0) {
         currentIcon.classList.toggle("fa-plus");
         currentIcon.classList.toggle("fa-minus");
       }
+    });
+  });
+
+  gamesContainer.addEventListener("click", function (e) {
+    buttons.forEach((button) => {
+      button.classList.remove("_active");
+    });
+
+    icons.forEach((icon) => {
+      icon.classList.add("fa-plus");
+      icon.classList.remove("fa-minus");
     });
   });
 }

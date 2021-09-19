@@ -1495,6 +1495,15 @@ button {
   padding-bottom: 30px;
 }
 
+.games__quit-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
 .games img {
   max-width: 100%;
 }
